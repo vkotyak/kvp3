@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>День 17</h2>
+		<img src="pictures/iabs2.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+		-->
+		<style>
+			.corp-cube {
+				background-color: #FEDB37;
+				width: 300px;
+				height: 300px;
+				padding: 10px;
+				margin: 0 auto;
+			}
+			.corp-bgc {
+				background-color: #FEDB37;
+			}
+			#cover {
+				background-color: #FEDB37;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+		</style>
+	</section>
+<section class="slide black">
+	<style>
+	#cover h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">SQL</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Самостоятельная работа</h2>
+	<ol>
+		<li>Скачать <a href="exercise/day17/clients.sql.tar.gz">Архив</a></li>
+		<li>Создать новую БД clients</li>
+		<li>Установить в неё дамп clients.sql</li>
+		<li>Выбрать всех клиентов по фамилии Иванов</li>
+		<li>Выбрать все города Днепропетровской области</li>
+		<li>Выбрать всех клиентов у которых телефон заканчивается на 2</li>
+	</ol>
+</section>
+<section class="slide">
+	<h2>JOIN - объединение</h2>
+	<p>У нас есть таблица Клиенты в которой есть поле ИД города. И есть таблица Города, в которой хранится название города и другая информация о нем. Мы хотим написать запрос, который выведет таблицу в 2 колонки Фамилию и Город</p>
+</section>
+<section class="slide">
+	<img src="pictures/day17/day17.jpg" style="width: 100%;">
+</section>
+<section class="slide">
+	<h2>SQL Запрос</h2>
+	<pre>
+		<code>SELECT clients.lname, cities.title </code>
+		<code class="next">FROM clients</code>
+		<code class="next">JOIN cities ON clients.city_id = cities.id</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Псевдонимы для имен таблиц</h2>
+	<pre>
+	<code>SELECT c.lname, cc.title </code>
+	<code>FROM clients <mark class="important">c</mark></code>
+	<code>JOIN cities <mark class="important">cc</mark> ON c.city_id = cc.id</code>	
+	</pre>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<ol>
+		<li>Выбрать всех клиентов из Днепропетровской области</li>
+		<li>Выбрать всех клиентов из городов с населением более 500 000 </li>
+		<li>Выбрать всех клиентов со статусом Сохранен</li>
+		<li>Выбрать всех клиентов со статусом Активен из города Киев</li>
+		<li>Посчитать сумму счетов для каждого клиента используя GROUP BY</li>
+		<li>Посчитать средний чек по всем клиентам из Киева</li>
+	</ol>
+</section>
+<section class="slide">
+	<h2>INNER, LEFT, RIGHT, FULL joins</h2>
+	<p>Просто JOIN в sql это короткий синтаксис для INNER JOIN. JOIN = INNER JOIN</p>
+	<p>INNER JOIN теряет данные, которых нет в обоих таблицах одновременно при объединении.</p>
+	<p>Мы не увидим в нашем запросе клиентов без города</p>
+</section>
+<section class="slide">
+	<img src="pictures/day17/joins.png" style="width: 100%; position: relative; top: -15%" alt="">
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<ul>
+		<li>У одного из клиентов выставить город в NULL</li>
+		<li>Вывести фамилии клиентов с их городами, включая клиентов без городов</li>
+		<li>Добавть еще 1 город</li>
+		<li>Переписать запрос так, чтобы вывести в том числе и города без клиентов</li>
+	</ul>
+</section>
+<section class="slide black">
+	<style>
+	#cover h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">YII</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<p>Работа с документацией</p>
+</section>
+<section class="slide">
+	<h2>Паттерн ActiveRecord</h2>
+	<p>Схема Active Record — это подход к доступу к данным в базе данных. Таблица базы данных или представление обернуты в классы. Таким образом объектный экземпляр связан к единственной строке в таблице. После создания объекта новая строка будет добавляться к таблице на сохранение. Любой загруженный объект получает свою информацию от базы данных. Когда объект обновлен, соответствующая строка в таблице также будет обновлена. Класс обертки реализует методы средства доступа или свойства для каждого столбца в таблице или представлении.</p>
+</section>
+<section class="slide">
+	<h2>Без AR</h2>
+	<pre>
+		<code>$db = Yii::$app->db;</code>
+		<code>$db->createCommand(</code>
+		<code>    'INSERT INTO `customer` (`name`) VALUES (:name)',</code>
+		<code>    [':name' => 'Qiang']</code>
+		<code>)->execute();	</code>	
+		<code class="next">$customers = $db->createCommand("SELECT * FROM customer")</code>
+		<code class="next">->queryAll()</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>С AR</h2>
+	<pre>
+		<code>$customer = new Customer();</code>
+		<code>$customer->name = 'Qiang';</code>
+		<code>$customer->save();</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Обновление записи</h2>
+	<pre>
+		<code>$customer = Customer::findOne(123);</code>
+		<code>$customer->name = "Test";</code>
+		<code>$customer->save(); // Произойдет UPDATE</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Таблицы без s в конце</h2>
+	<p>Когда в своём проекте для взаимодействия с БД вы используете паттерн AR, не называйте таблицы в множественном числе.</p>
+</section>
+<section class="slide">
+	<h2>Практическая работа 1</h2>
+	<ol>
+		<li>Создать таблицу email</li> 
+		<li>Генерация модели и формы для страницы “Мы с вами свяжемся”</li>
+		<li>Добавление валидации email</li>
+		<li>Добавление действия контроллера</li>
+	</ol>
+</section>
+<section class="slide">
+	<h2>Практическая работа 2</h2>
+	<ol>
+		<li>Создать таблицу student</li> 
+		<li>Создать связанную таблицу home_work</li>
+		<li>Сгенерировать crud для таблиц</li>
+	</ol>
+</section>
+<section class="slide">
+	<h2>Домашнее задание</h2>
+	<p>Задачник День 17</p>
+</section>
+		<p class="badge">
+			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remJove “progress” element.
+	-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

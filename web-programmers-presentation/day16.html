@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>День 16</h2>
+		<img src="pictures/iabs2.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+		-->
+		<style>
+			.corp-cube {
+				background-color: #FEDB37;
+				width: 300px;
+				height: 300px;
+				padding: 10px;
+				margin: 0 auto;
+			}
+			.corp-bgc {
+				background-color: #FEDB37;
+			}
+			#cover {
+				background-color: #FEDB37;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+		</style>
+	</section>
+<section class="slide black">
+	<style>
+	#cover h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">Javascript</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>	
+<section class="slide">
+	<h2>Javascript</h2>
+	<p>JavaScript ("JS" для краткости) — это полноценный динамический язык программирования, который применяется к HTML документу, и может обеспечить динамическую интерактивность на веб-сайтах. Его разработал Brendan Eich, сооснователь проекта Mozilla, Mozilla Foundation и Mozilla Corporation.</p>
+</section>
+<section class="slide">
+	<h2>Задачи</h2>
+	<p>
+Вы можете сделать очень многое с JavaScript. Вы можете начать с малого, с простых функций, таких как карусели, галереи изображений, изменяющиеся макеты и отклик на нажатие кнопок. Когда вы станете более опытным в языке, вы сможете создавать игры, анимированную 2D и 3D графику, полномасштабные приложения с базами данных и многое другое!
+	</p>
+</section>
+<section class="slide">
+	<h2>Использование</h2>
+	<p>Подключить внешний скрипт</p>
+	<pre><code>&lt;script src=&quot;file.js&quot;&gt;&lt;/script&gt;</code></pre>
+	<p class="next">Инлайново</p>
+	<pre class="next"><code>&lt;script&gt;alert( 1 );&lt;/script&gt;</code></pre>
+</section>
+<section class="slide">
+	<h2>Переменные и комментарии</h2>
+	<pre>	
+	<code>var myVariable;</code>
+	<code>myVariable = 'Bob';</code>
+	<code>var myVariable = 'Bob';</code>
+	<code class="next"><markup class="comment">//Комментарии как в php</markup></code>
+	<code class="next"><markup class="comment">/* И многострочные есть */</markup></code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Типы</h2>
+	<ul>
+		<li>String</li>	
+		<li>Number</li>	
+		<li>Boolean</li>	
+		<li>Array</li>	
+		<li>Object	</li>		
+	</ul>
+</section>
+<section class="slide">
+	<h2>Условия</h2>
+	<pre>
+		<code>var iceCream = 'chocolate';</code>
+		<code>if (iceCream === 'chocolate') {</code>
+		<code>  alert('Yay, I love chocolate ice cream!');</code>
+		<code>} else {</code>
+		<code>  alert('Awwww, but chocolate is my favorite...');</code>
+		<code>}</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Функции</h2>
+	<pre>
+		<code>function multiply(num1,num2) {</code>
+		<code>  var result = num1 * num2;</code>
+		<code>  return result;</code>
+		<code>}</code>
+		<code>multiply(4,7);</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>События</h2>
+	<p>Для создания действительной интерактивности на веб-сайте, вам необходимы события — это структура, которая слушает то, что происходит в браузере, а затем позволяет вам запускать код в ответ на это. Наиболее очевидным является событие клика, которое вызывается браузером, когда мы щёлкаем по чему-то мышью.</p>
+</section>
+<section class="slide">
+	<h2>Пример событий</h2>
+	<pre>
+		<code>var myHTML = document.querySelector('html');</code>
+		<code>myHTML.onclick = function() {};	</code>	
+	</pre>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<ul>
+		<li>alert(“Hello World”);</li>
+		<li>Объявление переменных</li>
+		<li>Операции с переменными. Арифметика, конкатенация.</li>
+		<li>Цикл for</li>
+		<li>Написание своей функции</li>		
+	</ul>
+</section>
+<section class="slide black">
+	<style>
+	#cover h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">SQL</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>NULL</h2>
+	<p>Что такое NULL?</p>
+	<pre>
+		<code class="next">SELECT column_names</code>
+		<code class="next">FROM table_name</code>
+		<code class="next"><mark class="comment">--WHERE column_name IS NULL;</mark></code>
+		<code class="next"><mark class="comment">--WHERE column_name IS NOT NULL;</mark></code>
+	</pre> 
+</section>
+<section class="slide">
+	<h2>INSERT и UPDATE</h2>
+	<pre>
+		<code>INSERT INTO table_name SET column_name = NULL;</code>
+		<code>UPDATE table_name SET column_name = NULL;</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Строковые функции MYSQL</h2>
+	<pre>
+		<code>SELECT FROM client</code>
+		<code>WHERE  CONCAT(fname, " ", lname) = "Владимир Романичев";</code>
+		<code class="next"><mark class="comment">--в php "$fname $lname"</mark></code>
+		<code class="next">SELECT CONCAT(fname, " ", lname) FROM client;</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Часто используемые функции</h2>
+	<ul>
+		<li>TRIM() - обрежет пробелы по краям строки</li>
+		<li class="next">CONCAT(str1, str2, ...) - объединение строк</li>
+		<li class="next">LEFT(n) - обрежет n символов слева</li>
+		<li class="next">RIGHT(n) - обрежет n символов справа</li>
+		<li class="next">REPLACE('где', 'что', 'на что') - заменяет подстроку в строке</li>
+		<li class="next">SUBSTRING(str, n, m) - вернет подстроку начиная с n символа длиной m</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Псевдонимы</h2>
+	<pre>
+		<code>SELECT CONCAT(fname, " ", lname) <mark class="important">AS</mark> some_pseudo </code>
+		<code>FROM client;</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Практическая</h2>
+	<ul>
+		<li>Создать таблицу students с полями Имя, Фамилия, Отчество, Возраст</li>
+		<li>Вставить в таблицу 3 строки с данными студентов</li>
+		<li>Вставить в таблицу 1 строку с возрастом равным NULL</li>
+		<li>Вывести ФИО всех учеников в одной колонке используя функцию CONCAT</li>
+		<li>Вывести фамилию и инициалы всех студентов в три колонки используя LEFT</li>
+		<li>Вывести фамилию и инициалы используя CONCAT и LEFT</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Неточный поиск с LIKE</h2>
+	<ul>
+		<li>% - отвечает за любое количество символов</li>
+		<li>_ - отвечает за 1 символ</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Примеры</h2>
+	<ul>
+		<li>WHERE CustomerName LIKE 'a%'	найдет любые значения начинающиеся на "a"</li>
+		<li class="next">WHERE CustomerName LIKE '%a'	найдет любые значения заканчивающиеся на "a"</li>
+		<li class="next">WHERE CustomerName LIKE '%or%'	найдет любые значения содержащие "or"</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Примеры</h2>
+	<ul>
+		<li>WHERE CustomerName LIKE '_r%'	найдет любые значения содержащие "r" во второй позиции</li>
+		<li class="next">WHERE ContactName LIKE 'a%o'	найдет любые значения начинающиеся на "a" и заканчивающиеся на "o"</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Агрегирующие функции</h2>
+	<p>Агрегирующие функции производят вычисление одного «собирающего» значения (суммы, среднего, максимального, минимального значения и т. п.) для заданных групп строк таблицы. Группы строк определяются различными значениями заданного поля (полей) таблицы. Разбиение на группы выполняется с помощью предложения group by.</p>
+</section>
+<section class="slide">
+	<h2>Агрегирующие функции</h2>
+	<p>
+		count, sum, avg, max, min, group_concat
+	</p>
+	<pre>
+		<code>SELECT COUNT(*) FROM students;</code>
+		<code>SELECT SUM(age) FROM students;</code>
+		<code>SELECT MAX(age) FROM students;</code>
+	</pre>
+</section>
+<section class="slide black">
+	<style>
+	#cover h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">YII2</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Самостоятельная работа</h2>
+	<ul>
+		<li>Создать свой контроллер my с действиями index и form</li>
+		<li>Создать представления для страниц, пока пустые</li>
+		<li>В меню сайта оставить только пункты с новыми действиями</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Формы</h2>
+	<pre>
+		<code>class Form extends Model {</code>
+		<code>    public $email;</code>
+		<code>    public function rules() {</code>
+		<code>        return [</code>
+		<code>            ['email', 'required'],</code>
+		<code>            ['email', 'email']</code>
+		<code>        ];</code>
+		<code>    }</code>
+		<code>}</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Добавить view/form.php</h2>
+<pre style="background:rgba(238,238,238,0.92);color:#000; white-space: pre;">&lt;?php $form <span style="color:#00f">=</span> <span style="color:#33f;font-weight:700">ActiveForm</span><span style="color:#00f">::</span>begin(); ?>
+&lt;?= $form<span style="color:#00f">-></span>field($model, <span style="color:#093">'email'</span>) ?>
+    <span style="color:#03c">&lt;<span style="font-weight:700">div</span> <span style="color:#36c;font-style:italic">class</span>=<span style="color:#093">"form-group"</span>></span>
+        &lt;?= <span style="color:#33f;font-weight:700">Html</span><span style="color:#00f">::</span>submitButton(<span style="color:#093">'Отправить'</span>, [<span style="color:#093">'class'</span> <span style="color:#00f">=></span> <span style="color:#093">'btn btn-primary'</span>]) ?>
+    <span style="color:#03c">&lt;/<span style="font-weight:700">div</span>></span>
+&lt;?php <span style="color:#33f;font-weight:700">ActiveForm</span><span style="color:#00f">::</span>end(); ?>
+</pre>
+</section>
+<section class="slide">
+	<h2>Изменить действие form</h2>
+	<pre>
+	    <code>public function actionForm(){</code>
+	    <code>    $model = new Form();</code>
+	    <code>    return $this->render("form", ['model' => $model]);</code>
+	    <code>}</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Задачи</h2>
+	<ol>
+		<li>добавить form-success.php для успешного сохранения</li>
+		<li>добавить вывод form-success если форма валидна</li>
+		<li>сохранить в форму в файл</li>
+		<li>добавить поле name на форму</li>
+		<li>добавить метод save модели</li>
+		<li>навести порядок в коде</li>
+	</ol>
+</section>
+<section class="slide">
+	<h2>Домашнее задание</h2>
+	<p>Задачник День 16</p>
+</section>
+		<p class="badge">
+			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remJove “progress” element.
+	-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+	<body class="shower list">
+		<style>
+			.refuctorman {
+				height: 100%; 
+				left: 20%; 
+				position: relative;
+				top: -5%;
+			}
+			.small-refuctorman {
+				height: 80%;
+				left: 25%;
+			}
+		</style>
+		<header class="caption">
+			<h1>Shower Presentation Engine</h1>
+			<p>Yours Truly, Famous Inc.</p>
+		</header>
+		<section class="slide">
+			<h2 class="shout shrink">Принципы SOLID в PHP</h2>
+		</section>
+		<section class="slide">
+			<h2>Кто я?</h2>
+			<ul>
+				<li>Тот кто написал сотни тысяч строк говнокода.</li>
+				<li>Тот кто хочет писать код так, чтобы потом не плакать над ним.</li>
+			</ul>
+		</section>
+		<section class="slide black">
+			<img src="pictures/solid/comics.png" class="cower" style="position: relative; width: 80%; top: -20%; left: 10%;" alt="">
+		</section>
+		<section class="slide">
+			<h2>Low coupling - high cohesion</h2>
+			<ul>
+				<li class="next">Связанный код - это мука</li>
+				<li class="next">Правка мелкого бага ломает код в трех местах</li>
+				<li class="next">Добавление нового модуля или компонента затрагивает всю программу</li>
+				<li class="next">Процедурное мышление в ООП языках способствует нарушению принципа</li>
+			</ul> 
+		</section>
+		<section class="slide">
+			<h2>Проблемы процедурного мышления в ООП</h2>
+			<ul>
+				<li>Мы все учились мыслить в процедурном стиле</li>
+				<li>Блок схемы складываются в нашей голове молниеносно</li>
+				<li>Но ООП это про взаимодействие объектов, а не про алгоритм</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<h2>Хелперы, утилитные классы</h2>
+			<ul>
+				<li>Удобно создавать классы с кучей статических методов</li>
+				<li>Удобно вызывать методы не создавая объекты</li>
+				<li>Классы - это хранилище функций</li>
+				<li>Свойства - это такие же переменные но через стрелочку</li>
+				<li class="next">Но это не ООП!</li>
+				<li class="next">Статика быстро растягивается по всему проекту, менять ее больно избавляться от нее страшно</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<h2>Наследование для процедурщика</h2>
+			<ul>
+				<li>Классы - хранилище функций</li>
+				<li>Наследование - способ быстро поделиться набором функций</li>
+				<li>Мне нужна функция из того класса - я наследую</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<h2 class="shout shrink">Клуб анонимных процедурщиков</h2>
+		</section>
+		<section class="slide">
+			<h2>Что делает процедурщик?</h2>
+			<ul>
+				<li class="next">Есть класс А с тремя методами и мы пишем класс Б, которому нужны все методы А.</li> 
+				<li class="next">Есть класс А с пятью методами и мы пишем класс Б, которому нужны четыре метода из А.</li>
+				<li class="next">Есть класс А с пятью методами и набор классов Б, Г, В, Д, которым нужно какое-то количество методов из А.</li>
+				<li class="next">Есть класс А с пятью методами. Есть классы Б, которому нужны методы А. Есть классы Г, В, Д, которым нужен 1 метод Б.</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<h2>Итог</h2>
+			<ul>
+				<li>Наследование - это максимальная связанность классов</li>
+				<li class="next">Наследование повсюду</li>				
+				<li class="next">Все уже забыли ради каких методов класс Б наследовался</li>
+				<li class="next">Методы которые классу Б были не нужны расползлись по коду</li>
+				<li class="next">Для изменения одного метода класса родителя нужна команда программистов и месяц отладки с тестировщиками</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<h2>Меняйте наследование на композицию</h2>
+			<img src="pictures/solid/refactorman.jpg" alt="" class="refuctorman small-refuctorman">
+		</section>
+	<!-- 
+	   Придумать пример
+	-->
+	<section class="slide">
+		<h2>Учитесь думать объектами</h2>
+		<ul>
+			<li>Никто точно не знает как это</li>
+			<li>На эту тему куча холиваров</li>
+			<li>Стремитесь работать над своим ООП</li>
+			<li>Ваш код станет лучше</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>SOLID</h2>
+		<p>Набор принципов, соблюдение которых позволяет писать расширяемый, менее связанный, тестируемый и объектно-ориентированный код.</p>
+		<ul class="next">
+			<li>Принцип единственной ответственности (Single responsibility)</li>
+			<li>Принцип открытости/закрытости (Open-closed)</li>
+			<li>Принцип подстановки Барбары Лисков (Liskov substitution)</li>
+			<li>Принцип разделения интерфейса (Interface segregation)</li>
+			<li>Принцип инверсии зависимостей (Dependency Invertion)</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>SRP</h2>
+		<ul>
+			<li>Есть только одна причина для изменения класса</li>
+			<li>Каждый программный объект имеет одно и только одно назначение, и его можно исчерпывающе описать одним предложением, не используя союзы</li>			
+		</ul> 
+	</section>
+	<section class="slide">
+		<h2>Проблема</h2>
+		<pre>
+			<code>class Client {</code>
+			<code>    function add(){}</code>
+			<code>    function edit(){}</code>
+			<code>    function delete(){}</code>
+			<code>    function addPet(){}</code>
+			<code>    function editPet(){}</code>
+			<code>}	</code>
+		</pre>	
+	</section>
+	<section class="slide">
+		<img src="pictures/solid/refactorman.jpg" alt="" class="refuctorman">
+	</section>
+	<section class="slide">
+		<pre>
+			<code>class Client {</code>
+			<code>    function add(){}</code>
+			<code>    function edit(){}</code>
+			<code>    function delete(){}</code>
+			<code>}</code>
+			<code>class Pet {</code>
+			<code>    function add(){}</code>
+			<code>    function edit(){}</code>
+			<code>    function delete(){}</code>
+			<code>}	</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Проблема</h2>
+	</section>
+	<section class="slide">
+		<pre>
+			<code>function edit($data) {</code>
+			<code>    $clientRow = new ClientRow($data['id']);</code>
+			<code>    $clientRow->import($data);</code>
+			<code>    $clientRow->save();</code>
+			<code>    self::addClientToClinic($clientRow->id);</code>
+			<code>    self::updateClearPhone($clientRow->id);</code>
+			<code>    $this->logger->log("edit client", $clientRow->id);</code>
+			<code>}</code>
+		</pre>	
+	</section>
+	<section class="slide">
+		<img src="pictures/solid/refactorman.jpg" alt="" class="refuctorman">
+	</section>
+	<section class="slide">
+		<pre>
+			<code>public function edit($data) {</code>
+			<code>    $clientRow = new ClientRow($data['id']);</code>
+			<code>    $clientRow->import($data);</code>
+			<code>    $clientRow->save();</code>
+			<code>    $this->afterEdit($clientRow);</code>
+			<code>}</code>
+			<code>protected function afterEdit($clientRow){</code>
+			<code>    (new ClientEvent('edit', $clientRow))->fire();</code>
+			<code>}</code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<pre>
+			<code>class ClientToClinicRelation {</code>
+			<code>    function addToClinic($clientId){}</code>
+			<code class="next">    function onClientEdit($event){}</code>
+			<code class="next">    function onInvoiceAdd($event){}</code>
+			<code class="next">    function onClientAdd($event){}</code>
+			<code class="next">    function onMedcardAdd($event){}</code>
+			<code>}</code>
+		</pre>		
+	</section>
+	<section class="slide">
+		<pre>
+			<code>class ClearPhone { </code>
+			<code>    function update($clientRow){}</code>
+			<code>    function add($clientRow){}</code>
+			<code>    function onClientEdit($event){}</code>
+			<code>    function onClientAdd($event){}</code>
+			<code>}</code>			
+		</pre>
+	</section>
+	<section class="slide">
+		<pre>
+			<code>class ClientLogger {</code>
+			<code>    function onAllClientEvents($event){</code>
+			<code>        $this->logger->log($event->name, $event->row->id);</code>
+			<code>    }</code>
+			<code>...</code>
+			<code class="next">$client->on('edit', [$clientToClinicRelation, 'onClientEdit']);</code>
+			<code class="next">$client->on('edit', [$clearPhone, 'onClientEdit']);</code>
+			<code class="next">$client->on('*', [$clientLogger, 'onAllClientEvents']);</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Проблема</h2>
+	</section>	
+	<section class="slide">
+		<pre>
+			<code>class TextField implements IField {</code>
+			<code>    const MAX_TRY_COUNT = 5;</code>
+			<code>    public function setValue($selector, $value) {</code>
+			<code>        while ($this->isNeedRepeatEnter($selector, $value)) {</code>
+			<code>            $this->webDriver->findElement($selector)</code>
+			<code>                ->click()->sendKeys($value);</code>
+			<code>            $this->tryCount++;</code>
+			<code>        }</code>
+			<code>    }</code>
+			<code>...</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<img src="pictures/solid/refactorman.jpg" alt="" class="refuctorman">
+	</section>	
+	<section class="slide">
+		<pre>
+			<code>class TextField implements IField {</code>
+			<code>    public function setValue($selector, $value) {</code>
+			<code>        $element = $this->webDriver</code>
+			<code>            ->findElement($selector)</code>
+			<code>            ->click()->sendKeys($value);</code>
+			<code>        if ($this->isValidValue($element, $value)) {</code>
+			<code>            throw new RuntimeException("Value not valid");</code>
+			<code>        }</code>
+			<code>    }</code>
+			<code>...</code>
+		</pre>
+	</section>		
+	<section class="slide">
+		<pre>
+			<code>class RepeateEnterField implements IField {</code>
+			<code>    public function setValue($selector, $value) {</code>
+			<code>        while ($this->isNeedRepeatEnter()) {</code>
+			<code>            try {</code>
+			<code>                $this->field->setValue($selector, $value);</code>
+			<code>            } catch (RuntimeException $exception) {</code>
+			<code>                $this->hasException = true;</code>
+			<code>            }</code>
+			<code>            $this->tryCount++;</code>
+			<code>        }</code>
+			<code>...</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Как это использовать?</h2>
+		<ul>
+			<li>$textField = new RepeateEnterField(new TextField());</li>
+			<li>$dateField = new RepeatEnterField(new DateField());</li>
+			<li>$comboBox = new RepeateEnterField(new ComboBox());</li>	
+			<li class="next">$clearTextField = new ClearBeforeEnterField($textFiled);</li>
+			<li class="next">$sleepBeforeEnter = new SleepBeforeEnterField($textFiled);</li>
+			<li class="next">$fillIfEmpty = new FillIfEmptyField($textFiled);</li>
+			<li class="next">$takeScreenshotBeforeEnter = new TakeScreenshotAfterEnterField($sleepBeforeEnter);</li>
+		</ul>	
+	</section>
+	<section class="slide">
+		<h2>Что мы получили?</h2> 
+		<ul>
+			<li>Кучу небольших классов и методов(Это плохо?)</li>
+			<li class="next">Устранили дублирование кода</li>
+			<li class="next">Повторное использование кода теперь осуществляется не через ctrl + c</li>
+			<li class="next">Головную боль от того как разделить, как назвать, куда положить</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Принцип открытости/закрытости (Open-closed)</h2>
+		<p>Данный принцип гласит — "программные сущности должны быть открыты для расширения, но закрыты для модификации". На более простых словах это можно описать так — все классы, функции и т.д. должны проектироваться так, чтобы для изменения их поведения, нам не нужно было изменять их исходный код.</p>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Проблема</h2>
+	</section>	
+	<section class="slide">
+		<pre>
+			<code>class OrderRepository {</code>
+			<code>	public function load($orderID) {</code>
+			<code>		$pdo = new PDO(...);</code>
+			<code>		$statement = $pdo->prepare('SELECT * FROM ...');</code>
+			<code>		$statement->execute(array(':id' => $orderID));</code>
+			<code>		return $query->fetchObject('Order');	</code>
+			<code>	}</code>
+			<code>	public function save($order){/*...*/}</code>
+			<code>	public function update($order){/*...*/}</code>
+			<code>	public function delete($order){/*...*/}</code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<img src="pictures/solid/refactorman.jpg" alt="" class="refuctorman">
+	</section>	
+	<section class="slide">
+		<pre>
+			<code>class OrderRepository {</code>
+			<code>	public function setSource(IOrderSource $source) {</code>
+			<code>		$this->source = $source;</code>
+			<code>	}</code>
+			<code>	public function load($orderID) {</code>
+			<code>		return $this->source->load($orderID);</code>
+			<code>	}</code>
+			<code>	public function save($order){/*...*/}</code>
+			<code>	public function update($order){/*...*/}</code>
+		</pre>		
+	</section>
+	<section class="slide">
+		<ul>
+			<li>interface IOrderSource</li>
+			<li>class MySQLOrderSource implements IOrderSource</li>
+			<li>class ApiOrderSource implements IOrderSource</li>
+		</ul>
+	</section>	
+	<section class="slide shrink">
+		<h2 class="shout">Проблема</h2>
+	</section>	
+	<section class="slide">
+		<pre>
+			<code>class CSVExport {</code>
+			<code>    public static function export($columns, $data, $path) {</code>
+			<code>        $fileName = date('Y_m_d_H_i_s'). '.csv';   </code>     
+			<code>        $fp = fopen($path . $fileName, 'w');</code>
+			<code>        fputcsv($fp, $columns, ';');</code>
+			<code>        foreach ($data as $row) {</code>
+			<code>            fputcsv($fp, $row, ';');</code>
+			<code>        }</code>
+			<code>        fclose($fp);</code>
+			<code>        return $path . $fileName;</code>
+			<code>    }</code>
+			<code>}	</code>
+		</pre>		
+	</section>		
+	<section class="slide">
+		<h2>Проблема</h2>
+		<ul>
+			<li>Как менять формат файла?</li>
+			<li>Как сохранять файл на удаленный сервер?</li>
+		</ul>
+	</section>	
+	<section class="slide">
+		<img src="pictures/solid/refactorman.jpg" alt="" class="refuctorman">
+	</section>		
+	<section class="slide">
+		<pre>
+			<code>class CSVExport implements Exportable {</code>
+			<code>	public function export($columns, $data) {</code>
+			<code>        $fileName = date('Y_m_d_H_i_s'). '.csv'; </code>       
+			<code>        $fp = fopen($this->path . $fileName, 'w');</code>
+			<code>        fputcsv($fp, $columns, ';');</code>
+			<code>        foreach ($data as $row) {</code>
+			<code>            fputcsv($fp, $row, ';');</code>
+			<code>        }</code>
+			<code>        fclose($fp);</code>
+			<code>        return $this->path . $fileName;	</code>	
+			<code>	}</code>
+			<code>}</code>	
+		</pre>		
+	</section>
+	<section class="slide">
+		<pre>
+			<code>class RemoteFileSystemExport implements Exportable {</code>
+			<code>	protected $exportable;</code>
+			<code>	protected $remote;</code>
+			<code>	public function export($columns, $data){</code>
+			<code>		$exportedFilePath = $this->exportable->export();</code>
+			<code>		$response = $this->remote->upload($exportedFilePath);</code>
+			<code>		return $response['url'];</code>
+			<code>	}</code>
+			<code>}	</code>		
+		</pre>		
+	</section>
+	<section class="slide">
+		<pre>
+			<code>$csv = CSVExport("/tmp");</code>
+			<code>$excel = ExcelExport("/tmp");</code>
+			<code>$odt = OdtExport("/tmp");</code>
+			<code>$export = new RemoteFileSystemExport($csv, new AWSUploader());</code>
+			<code class="next">$export = new RemoteFileSystemExport($odt, new FTPUploader());</code>
+			<code class="next">$export = new RemoteFileSystemExport($csv, new DropboxUploader());</code>
+			<code class="next">$export = CacheExport($export);</code>
+			<code class="next">$export = LastClientVisitExport($export);</code>
+			<code>$url = $export->export($columns, $data);</code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Принцип подстановки Лисков</h2>
+		<ul>
+			<li>Функции, которые используют базовый тип, должны иметь возможность использовать подтипы базового типа, не зная об этом</li>
+			<li class="next">Если метод класса из иерархии возвращает массив - другие не могут вернуть объект или строку</li>
+			<li class="next">Если метод класса из иерархии возвращает true|false - другие не могут бросать Exception</li>
+			<li class="next">Если интерфейс предка отличается от родителя - это не предок(возможно)</li>
+		</ul>	
+	</section>
+	<section class="slide">
+		<h2>Еще немного о подстановке</h2>
+		<ul>
+			<li>Предусловия не могут быть усилены в подклассе</li>
+			<li>Постусловия не могут быть ослаблены в подклассе</li>
+		</ul>	
+		<pre class="next">
+			<code>if ($obj instanceof 'SomeClass') $obj->init();</code>
+			<code>$obj->do();</code>
+			<code>if ($obj instanceof 'AnotherClass') $obj->afterDo();</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Принцип разделения интерфейса (Interface segregation)</h2>
+		<p>Данный принцип гласит, что «Много специализированных интерфейсов лучше, чем один универсальный»
+Соблюдение этого принципа необходимо для того, чтобы классы-клиенты использующий/реализующий интерфейс знали только о тех методах, которые они используют, что ведёт к уменьшению количества неиспользуемого кода.</p>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Проблема</h2>
+	</section>
+	<section class="slide">
+	<pre>
+		<code>interface IItem {</code>
+		<code>	public function applyDiscount($discount);</code>
+		<code>	public function applyPromocode($promocode);</code>
+		<code>	public function setColor($color);</code>
+		<code>	public function setSize($size);		</code>	
+		<code>	public function setCondition($condition);</code>
+		<code>	public function setPrice($price);</code>
+		<code>}		</code>
+	</pre>
+	</section>
+	<section class="slide">
+		<img src="pictures/solid/refactorman.jpg" alt="" class="refuctorman">
+	</section>
+	<section class="slide">
+		<pre>
+			<code>interface IItem {</code>
+			<code>	public function setCondition($condition);</code>
+			<code>	public function setPrice($price);</code>
+			<code>}</code>
+			<code>interface IClothes {</code>
+			<code>	public function setColor($color);</code>
+			<code>	public function setSize($size);</code>
+			<code>	public function setMaterial($material);</code>
+			<code>}</code>
+			<code>interface IDiscountable ...</code>
+		</pre>		
+	</section>	
+	<section class="slide">
+		<h2>Принцип инверсии зависимостей (Dependency Invertion)</h2>
+		<p>Принцип гласит — «Зависимости внутри системы строятся на основе абстракций. Модули верхнего уровня не зависят от модулей нижнего уровня. Абстракции не должны зависеть от деталей. Детали должны зависеть от абстракций». Данное определение можно сократить — «зависимости должны строится относительно абстракций, а не деталей».</p>
+		<p class="next">Нельзя использовать new и статику, так вы привязываетесь к реализациям</p>
+	</section>
+	<section class="slide">
+		<h2>Какому классу принадлежит код?</h2>
+		<pre>
+			<code>public function edit($data) {</code>
+			<code>    $clientRow = new ClientRow($data['id']);</code>
+			<code>    $clientRow->import($data);</code>
+			<code>    $clientRow->save();</code>
+			<code>    $this->afterEdit($clientRow);</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<img src="pictures/solid/refactorman.jpg" alt="" class="refuctorman">
+	</section>	
+	<section class="slide">
+		<h2>А теперь?</h2>
+		<pre>
+			<code>public function edit($data) {</code>
+			<code>	$row = $this->rowFactory->create($data['id']);</code>
+			<code>	$row->import($data);</code>
+			<code>	$row->save();</code>
+			<code>	$this->afterEdit($row);</code>
+			<code>}		</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Не пишите как процедурщик</h2>
+		<ul>
+			<li>Сколько сущностей можно обобщить таким образом?</li>
+			<li class="next">Могли бы мы так сделать если бы метод был статичным?</li>
+			<li class="next">Статика отстой. Статика только для создания объектов</li>
+			<li class="next">Отказавшись от new и статики мы получили мощь настоящего повторного использования + тестируемость кода</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Наши фейлы из-за нарушения принципа</h2>
+		<ul>
+			<li>Файловая система(много вариантов фейлов)</li>
+			<li>Unisender</li>
+			<li>php mail</li>
+		</ul>
+		<p class="next">Если есть вероятность изменений - используйте абстракцию</p>
+	</section>
+	<section class="slide">
+		<h2>Не делайте так</h2>
+		<pre>
+			<code>class HelloSms {</code>
+			<code>	public function onClientCreate($event){</code>
+			<code>		$unisender = new Unisender();</code>
+			<code>		$unisender->connect();</code>
+			<code>		$unisender->sendSms($this->getSms($event));</code>
+			<code>		$unisender->close();</code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<pre>
+			<code>class UnisenderGateway implements SmsGateway ...</code>
+			<code>class SmsCenterGateway implements SmsGateway  ...</code>
+			<code>class HelloSms {</code>
+			<code>	public function onClientCreate($event){</code>
+			<code>		$this->smsGateway->send($this->getSms($event));</code>
+			<code>	}</code>
+			<code>}</code>			
+		</pre>
+		<p class="next">Как отправить смс решает не класс, а наша программа (SRP)</p>
+	</section>
+	<section class="slide">
+		<h2>Больше абстраций</h2>
+		<pre>
+			<code>interface SmsGateway extends MessageGateway;</code>
+			<code>class Mailchimp implements MessageGateway;</code>
+			<code>class Mandrill implements MessageGateway;</code>
+			<code></code>
+			<code>class HelloMessage {</code>
+			<code>	public function __construct($messageGateway, $messageFactory){}</code>
+			<code>	public function onClientCreate($event){</code>
+			<code>		$message = $this->messageFactory->create($event);</code>
+			<code>		$this->messageGateway->send($message);</code>
+			<code>	}</code>
+			<code>}	</code>	
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Как соблюдать принцип DI</h2>
+		<ol>
+			<li>Инъекция зависимости в конструктор при создании класса</li>
+			<li>Инъекция зависимости через setter</li>
+			<li>Явные инъекции, инициализация программы выглядит как много new вложенных в друг друга</li>
+			<li>Фабрики</li>
+			<li>Dependency injection container</li>
+			<li>Service locator</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>DIC - знает как строить ваши классы</h2>
+		<pre><code>$myobj = $dic->create('MyClass');</code></pre>
+		<p>Класс построиться исходя из анализа конструктора, либо вы должны указать явно, что передавать в конструктор определенному классу</p>		
+	</section>
+	<section class="slide">
+		<h2>Service Locator - хранит службы для определенного интерфейса</h2>
+		<pre><code>$myobj = $service->get('MyService');</code></pre>
+		<p class="next">Предварительно этот сервис мы должны туда положить.</p>
+		<pre class="next"><code>$service->set('MyService', $myService);<pre><code>		
+	</section>	
+	<section class="slide">
+		<h2>Что выбрать?</h2>
+		<p class="next">Соблюдайте принцип инверсии зависимостей любым удобным для вас способом.</p>
+	</section>
+	<section class="slide">
+		<h2>Итого</h2>
+		<ul>
+			<li>Применяя принципы SOLID можно писать гибкий и поддерживаемый код</li>
+			<li>Очень высокая степень повторного использования кода</li>
+			<li class="next">Но писать такой код в разы сложнее</li>
+			<li class="next">Легче быть процедурщиком</li>
+			<li class="next">Не спешите бросаться все переписывать</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Спасибо за внимание</h2>
+	</section>
+	<p class="badge">
+		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+	</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remJove “progress” element.
+	-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

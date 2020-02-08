@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>День 13</h2>
+		<img src="pictures/iabs2.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+		-->
+		<style>
+			.corp-cube {
+				background-color: #FEDB37;
+				width: 300px;
+				height: 300px;
+				padding: 10px;
+				margin: 0 auto;
+			}
+			.corp-bgc {
+				background-color: #FEDB37;
+			}
+			#cover {
+				background-color: #FEDB37;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+		</style>
+	</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<ul>
+		<li>Что такое класс?</li>
+		<li class="next">Что такое объект?</li>
+		<li class="next">Что такое инкапсуляция?</li>
+		<li class="next">Что такое наследование?</li>
+		<li class="next">Что такое полиморфизм?</li>
+		<li class="next">Что такое передача сообщение в ООП?</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	public $size = 10;</code>
+		<code>}</code>
+		<code>$bubble = new Bubble;</code>
+		<code>$bubble->size = 20;</code>
+		<code>echo $bubble->size;</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	function test(){</code>
+		<code>		echo "red";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$bubble = new Bubble;</code>
+		<code>$bubble->test();</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	static function test(){</code>
+		<code>		echo "red";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>Bubble::test();</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	public $var = "test";</code>	
+		<code>	static function test(){</code>
+		<code>		echo $this->var;</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>Bubble::test();</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	public $var = "test";</code>	
+		<code>	static function test(){</code>
+		<code>		echo self::var;</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>Bubble::test();</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>  public $size = 10;</code>
+		<code>	function __construct($size){</code>
+		<code>		echo "test";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$bubble = new Bubble(30);</code>
+		<code>echo $bubble->size;</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre>
+		<code>abstract class Test {</code>
+		<code>	abstract public function hello();</code>
+		<code>}</code>
+		<code>$test = new Test;</code>
+		<code>$test->hello();</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre>
+		<code>class ChildTest extends Test {</code>
+		<code>	function hello(){</code>
+		<code>		echo "Hello";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$childTest = new ChildTest;</code>
+		<code>$childTest->hello();</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre>
+		<code>function test(Test $a){</code>
+		<code>	$a->hello();</code>
+		<code>}</code>
+		<code>test($childTest);</code>
+		<code>$article = new Article();</code>
+		<code>test($article);</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre>
+		<code>class SecondChildTest extends Test {</code>
+		<code>	function hi(){</code>
+		<code>		echo "Hello";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$secondChildTest = new SecondChildTest;</code>
+		<code>$secondChildTest->hi();</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тест</h2>
+	<pre>
+		<code>interface IBook {</code>
+		<code>	public function sold();</code>
+		<code>}</code>
+	</pre>		
+</section>
+<section class="slide">
+	<h2>Тест</h2>
+	<pre>
+		<code>class Book  implements IBook {</code>
+		<code>	public funtion sold() {</code>
+		<code>		echo "book solded";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$book = new Book();</code>
+		<code>$book->sold();</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тест</h2>
+	<pre>
+		<code>class Book  extends IBook {</code>
+		<code>	public funtion sold() {</code>
+		<code>		echo "book solded";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$book = new Book();</code>
+		<code>$book->sold();</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<ol>
+		<li>.main {position: relative; top: 10px;}</li>
+		<li class="next">.main {position: relative; left: 10px;}</li>
+		<li class="next">.main {position: absolute; top: 10px;}</li>
+		<li class="next">.main {position: static; top: 10px;}</li>
+		<li class="next">.left {float: left;}</li>
+		<li class="next">.next {clear: both;}</li>
+	</ol>
+</section>
+<section class="slide black" id="homework">
+	<style>
+		#homework h2 {
+			color: rgba(0, 255, 255, 0.9);
+		}
+	</style>
+	<h2 class="shout">Домашнее задание</h2>
+	<img src="pictures/day11/home.jpg" alt="" class="cover">		
+</section>
+<section class="slide black" id="cover-php">
+	<style>
+	#cover-php h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">PHP</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Самостоятельная работа(20 минут)</h2>
+	<p><a href="exercise/day13/Day13.txt">Задание</a></p>
+	<p>Можно задавать вопросы</p>
+</section>
+<section class="slide">
+	<h2>Пространства имен</h2>
+	<p>Проблема: использовать в одной программе классы с одинаковыми именами.</p>
+	<p class="next">Пример: Вы не можете разместить в одной папке файл text.txt</p>
+	<p class="next">Но его можно разместить в разных папках dir/text.txt и dir2/text.txt</p>
+	<p class="next">PHP позволяет вам работать подобным образом</p>
+</section>
+<section class="slide">
+	<h2>Имеем такую структуру каталогов</h2>
+	<ul>
+		<li>
+			App
+			<ul>
+				<li>
+					Main
+					<ul>
+						<li>MyClass.php</li>
+					</ul>
+				</li>
+				<li>
+					Secondary
+					<ul>
+						<li>MyClass.php</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Раньше делали так</h2>
+	<pre>
+		<code><mark class="comment">//В файле MyClass.php из папки Main</mark></code>
+		<code>class App_Main_MyClass{}</code>
+		<code><mark class="comment">//В коде программы</mark></code>		
+		<code>$my1 = new App_Main_MyClass();</code>
+</section>
+<section class="slide">
+	<h2>Давайте смотреть код</h2>
+	<a href="https://github.com/itacademyIABS/web-program-materials/tree/master/students/scripts/namespace_demo/New">Пространства имен</a>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<p><a href="exercise/day13/day13-namespace.tar.gz">задание</a></p>
+	<ul>
+		<li>Создать экземпляры используя полный путь к классу</li>
+		<li>Создать экземпляры обоих классов используя ключевое слово use</li>
+	</ul>
+</section>
+
+<section class="slide black" id="cover-php">
+	<style>
+	#cover-php h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">БД</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>База данных</h2>
+	<p>База данных - набор сведений, хранящихся некоторым упорядоченным способом. Можно сравнить базу данных со шкафом, в котором хранятся документы. Иными словами, база данных - это хранилище данных. Сами по себе базы данных не представляли бы интереса, если бы не было систем управления базами данных (СУБД).</p>
+</section>
+<section class="slide">
+	<h2>СУБД</h2>
+	<p>Система управления базами данных - это совокупность языковых и программных средств, которая осуществляет доступ к данным, позволяет их создавать, менять и удалять, обеспечивает безопасность данных и т.д. В общем СУБД - это система, позволяющая создавать базы данных и манипулировать сведениями из них. А осуществляет этот доступ к данным СУБД посредством специального языка - SQL.</p>
+</section>
+<section class="slide">
+	<h2>SQL</h2>
+	<p>SQL - язык структурированных запросов, основной задачей которого является предоставление простого способа считывания и записи информации в базу данных.</p>
+</section>
+<section class="slide">
+	<h2>Зачем мне БД?</h2>
+	<ul>
+		<li>Восстановление после сбоев</li>
+		<li class="next">Производительность</li>
+		<li class="next">Многопользовательский доступ</li>
+		<li class="next">Резервное копирование</li>
+		<li class="next">Права доступа</li>
+		<li class="next">Интерфейс взаимодействия</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Когда мне не нужна БД?</h2>
+	<ul>
+		<li>Структура данных очень простая</li>	
+		<li class="next">Приложение не рассчитано на высокую производительность</li>
+		<li class="next">Отсутствие конкуренции в работе с данным</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Реляционные БД</h2>
+	<p>Реляционные базы данных, как мы уже знаем, состоят из таблиц. Каждая таблица состоит из столбцов (их называют полями или атрибутами) и строк (их называют записями или кортежами)</p>
+</section>
+<section class="slide">
+	<h2>Таблица в БД</h2>
+	<table>
+		<tr>
+			<td>Поля или атрибуты:</td>
+			<td>Имя</td>
+			<td>Отчество</td>
+			<td>Фамилия</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td align="center" colspan="3">Записи или кортежы</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Владимир</td>
+			<td>Владимирович</td>
+			<td>Романичев</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Иванов</td>
+			<td>Иван</td>
+			<td>Иванович</td>
+		</tr>		
+	</table>
+</section>
+<section class="slide">
+	<h2>Требования к БД</h2>
+	<ul>
+		<li>В таблице не может быть двух одинаковых строк</li>
+		<li>На пересечении каждого столбца и строки может находиться только атомарное значение (одно значение, не состоящее из группы значений).</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Нормализация</h2>
+	<table>
+		<tr>
+			<td>Пользователь</td>
+			<td>Город</td>
+			<td>Код Города</td>
+			<td>ФИО</td>
+			<td>Статьи</td>
+		</tr>
+		<tr>
+			<td>admin</td>
+			<td>Никополь</td>
+			<td>05662</td>
+			<td>Романичев В.В.</td>
+			<td>Заголовок%%%Статья, ...</td>
+		</tr>
+		<tr>
+			<td>user1</td>
+			<td>Киев</td>
+			<td>035</td>
+			<td>Иванов И.И.</td>
+			<td>Заголовок%%%Статья, ... </td>
+		</tr>				
+	</table>
+</section>
+<section class="slide">
+	<h2>Атомарность - выделяем статьи</h2>
+	<h3>Статьи</h3>
+	<table>
+		<tr>
+			<td>Пользователь</td>
+			<td>Заголовок</td>
+			<td>Текст</td>
+		</tr>
+		<tr>
+			<td>user1</td>
+			<td>Заголовок1</td>
+			<td>Текст1</td>
+		</tr>		
+		<tr>
+			<td>user1</td>
+			<td>Заголовок2</td>
+			<td>Текст2</td>
+		</tr>
+		<tr>
+			<td>admin</td>
+			<td>Заголовок1</td>
+			<td>Текст1</td>
+		</tr>			
+	</table>
+</section>
+<section class="slide">
+	<h2>Выделяем связанные между собой данные</h2>
+	<table>
+		<tr>
+			<td>Пользователь</td>
+			<td>Город</td>
+			<td>Код Города</td>
+			<td>ФИО</td>
+		</tr>
+		<tr>
+			<td>admin</td>
+			<td>Никополь</td>
+			<td>05662</td>
+			<td>Романичев В.В.</td>
+		</tr>
+		<tr>
+			<td>user1</td>
+			<td>Киев</td>
+			<td>035</td>
+			<td>Иванов И.И.</td>
+		</tr>				
+	</table>	
+</section>
+<section class="slide">
+	<table>
+		<thead>Города</thead>
+		<tr>
+			<td>Город</td>
+			<td>Код Города</td>
+		</tr>
+		<tr>
+			<td>Никополь</td>
+			<td>05662</td>
+		</tr>	
+		<tr>
+			<td>Киев</td>
+			<td>035</td>
+		</tr>				
+	</table>
+</section>
+<section class="slide">
+	<table>
+		<thead>Пользователи</thead>
+		<tr>
+			<td>Пользователь</td>
+			<td>Город</td>
+			<td>ФИО</td>
+		</tr>
+		<tr>
+			<td>admin</td>
+			<td>Никополь</td>
+			<td>Романичев В.В.</td>
+		</tr>
+		<tr>
+			<td>user1</td>
+			<td>Киев</td>
+			<td>Иванов И.И.</td>
+		</tr>				
+	</table>
+</section>
+<section class="slide">
+	<h2>Первичный ключ</h2>
+	<p>Применяется для уникальной идентификации записи в таблице. В таблице не может быть две одинаковых записи с таким значением.</p>
+	<p class="next">Может быть составным</p>
+	<table>
+		<thead>Пользователи</thead>
+		<tr>
+			<td>Пользователь <mark class="important">PK</mark></td>
+			<td>Город <mark class="next important">PK</mark></td>
+			<td>ФИО</td>
+		</tr>
+		<tr>
+			<td>admin</td>
+			<td>Никополь</td>
+			<td>Романичев В.В.</td>
+		</tr>
+		<tr>
+			<td>user1</td>
+			<td>Киев</td>
+			<td>Иванов И.И.</td>
+		</tr>				
+	</table>	
+</section>
+<section class="slide">
+	<h2>Вторичный ключ</h2>
+	<table>
+		<tr>
+			<td>Пользователь<mark class="important">PK</mark></td>
+			<td>Город <mark class="important">FK</mark></td>
+			<td>ФИО</td>
+		</tr>
+		<tr>
+			<td>admin</td>
+			<td>Никополь</td>
+			<td>Романичев В.В.</td>
+		</tr>
+		<tr>
+			<td>user1</td>
+			<td>Киев</td>
+			<td>Иванов И.И.</td>
+		</tr>				
+	</table>	
+</section>
+<section class="slide">
+	<h2>Вторичный ключ</h2>
+	<table>
+		<tr>
+			<td>Город<mark class="important">PK</mark></td>
+			<td>Код Города</td>
+		</tr>
+		<tr>
+			<td>Никополь</td>
+			<td>05662</td>
+		</tr>	
+		<tr>
+			<td>Киев</td>
+			<td>035</td>
+		</tr>				
+	</table>	
+</section>
+<section class="slide">
+	<h2>Суррогатные первичные ключи и AUTO_INCREMENT</h2>
+	<p>Суррогатные ключи - уникальное поле, единственным призванием которого является уникальность в рамках этой таблицы.</p>
+	<p>Автоинкремент - увеличение числа на единицу для каждого нового значения.</p>
+</section>
+<section class="slide">
+	<h2>Проектирование</h2>
+	<p><a href="http://www.web2py.com/sqldesigner">Онлайн дизайнер</a></p>
+	<p>Создайте структуру таблиц для блога</p>
+</section>
+<section class="slide">
+	<h2>CRUD</h2>
+	<ul>
+		<li>C - CREATE</li>
+		<li>R - READ</li>
+		<li>U - UPDATE</li>
+		<li>D - DELETE</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Практическая работа SQL</h2>
+	<ul>
+		<li><a href="exercise/day13/day13.sql.tar.gz">Архив</a></li>
+		<li>Создание БД</li>
+		<li>Установка дампа базы данных из файла</li>
+		<li>Вывод списка БД и списка таблиц</li>
+		<li>INSERT</li>
+		<li>SELECT</li>
+		<li>UPDATE</li>
+		<li>PDO на php</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Создание БД</h2>
+	<p>CREATE DATABASE mydb</p>
+	<p>DEFAULT CHARACTER SET utf8</p>
+	<p>DEFAULT COLLATE utf8_general_ci;</p>
+</section>
+<section class="slide">
+	<h2>Другие команды</h2>
+	<a href="https://github.com/itacademyIABS/web-program-materials/tree/master/students/src/sql">sql</a>
+	<p>Установка дампа - mysql -uroot -ppassword dbname < dump.sql</p>
+	<p>Подключение к БД - mysql -uroot -ppassword</p>
+	<p>SHOW DATABASES;</p>
+	<p>SHOW TABLES IN nk2;</p>
+</section>
+<section class="slide">
+	<h2>Пример PDO</h2>
+	<p><a href="exercise/day13/pdo.php">Ссылка</a></p>
+</section>
+<section class="slide">
+	<h2>Домашнее задание</h2>
+	<p>Задачник День 13</p>
+</section>
+		<p class="badge">./
+			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remJove “progress” element.
+	-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

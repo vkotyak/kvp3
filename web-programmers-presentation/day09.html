@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>День 9</h2>
+		<img src="pictures/iabs2.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+		-->
+		<style>
+			.corp-cube {
+				background-color: #FEDB37;
+				width: 100px;
+				height: 100px;
+				padding: 10px;
+			}
+			.corp-bgc {
+				background-color: #FEDB37;
+			}
+			#cover {
+				background-color: #FEDB37;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+		</style>
+	</section>
+	<section class="slide">
+		<h2>Тесты</h2>
+		<pre>
+			<code>
+$arr = array("f");
+foreach($arr as &$v) {
+	$v = "g";
+}
+echo $arr[0];
+		</code>	
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre><code>
+$arr = array("f");
+foreach($arr as $k => $v) {
+	$arr[$k] = "g";
+}
+echo $arr[0];
+</code></pre>
+</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre><code>
+$arr = array("f");
+foreach($arr as $v) {
+	$v = "g";
+}
+echo $arr[0];
+</code></pre>
+</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+    <pre><code>
+require 'functions.php';
+$a = 100;
+echo some_function($a);
+
+</code></pre>
+</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+	<ul>
+		<li>Что такое рекурсия?</li>
+		<li class="next">Что такое кукисы?</li>
+		<li class="next">Что такое сесиии?</li>
+		<li class="next">В чем разница между кукисами и сессиями?</li>
+		<li class="next">Что такое авторизация?</li>
+		<li class="next">Что такое аутентификация?</li>
+	</ul>
+</section>	
+
+<section class="slide">
+	<h2>Тесты</h2>
+	<ol>
+		<li>a {...}</li>
+		<li class="next">.a {...}</li>
+		<li class="next">#a {...}</li>
+		<li class="next">#a a{...}</li>
+		<li class="next">.a #a{...}</li>
+		<li class="next">.main {...}</li>
+	</ol>
+</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+	<ol>
+		<li>.main > div {...}</li>
+		<li class="next">.second div {...}</li>
+		<li class="next">.third > .block {...}</li>
+		<li class="next">.main+div {...}</li>
+		<li class="next">div+p {...}</li>
+		<li class="next">a[href] {...}</li>
+		</ol>
+	</section>	
+	<section class="slide" id="yellow-cube">
+	<style>
+		#yellow-cube>div {
+			width: 300px;
+			height: 100px;
+			background-color: #FEDB37;
+			margin-top: 20px;
+		}
+	</style>
+		<h2>Блочные или строчные?</h2>
+		<div></div>
+		<div></div>
+		<div></div>	
+		</section>
+	<section class="slide" id="yellow-string">
+	<style>
+		#yellow-string>span {
+			background-color: #FEDB37;
+			margin-left: 20px;
+			padding-left: 200px;
+		}
+	</style>
+		<h2>Блочные или строчные?</h2>
+		<span></span>
+		<span></span>
+		<span></span>
+		</section>		
+	<section class="slide" >
+	<h2>Какой селектор более специфичный?</h2>
+	<ul>
+		<li>ul - #id</li>
+		<li class="next">div a - .main</li>
+		<li class="next">#main - .main</li>
+		<li class="next">a[href] - .main</li>
+		<li class="next">#id - .main li</li>
+		<li class="next">ul li - div a</li>
+	</ul>
+
+	</section>	
+	<section class="slide">
+		<h2>Что делают эти свойства?</h2>
+		<ol>
+			<li>font-weight</li>
+			<li class="next">text-align</li>
+			<li class="next">text-decoration</li>
+			<li class="next">font-family</li>			
+			<li class="next">@font-face</li>
+			<li class="next">line-height</li>
+		</ol>
+	</section>	
+	<section class="slide">
+		<h2>Таблицы</h2>
+		<pre>
+		<code>
+&lt;table&gt; 
+	&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;	
+		</code>	
+		</pre>
+	</section>	
+	<section class="slide black" id="cover-php">
+		<style>
+		#cover-php h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+		</style>
+		<h2 class="shout">PHP</h2>
+		<img src="pictures/code.jpg" alt="" class="cover">
+	</section>
+	<section class="slide">
+			<h2>Функция header</h2>
+			<pre>
+			<code>&lt;php</code>
+			<code>header("test: gg");</code>
+			</pre>
+		</section>	
+	<section class="slide">
+		<h2>Результат</h2>
+		<img src="pictures/header_func.png" alt="">
+	</section>	
+	<section class="slide">
+		<h2>Использование</h2>
+		<pre>
+		<code>&lt;php</code>
+		<code><mark class="comment">//Команда на установку куки</mark></code>
+		<code>header("Set-Cookie: sectet=sf342dsf2342df; ...;");</code>
+		<code class="next"><mark class="comment">//Браузер перейдет на другую страницу</mark></code>
+		<code class="next">header("Location: auth.php");</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Параметры по умолчанию</h2>
+		<pre>
+<code>&lt;?php</code>
+<code>function test($a = "test") {</code>
+<code>	echo $a;</code>
+<code>}</code>
+<code class="next">test(); <mark class="comment">//Выведет test</mark></code>
+<code class="next">test("foo"); <mark class="comment">//Выведет foo</mark></code>
+</pre>
+	</section>
+	<section class="slide">
+		<h2>Параметры по умолчанию</h2>
+		<pre>
+<code>&lt;?php</code>
+<code>function test($a = "test", $b = "quest") {</code>
+<code>	echo $a . $b;</code>
+<code>}</code>
+<code class="next">test(); <mark class="comment">//Выведет testquest</mark></code>
+<code class="next">test("foo"); <mark class="comment">//Выведет fooquest</mark></code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Анонимные фукнции</h2>
+		<pre>
+<code>&lt;?php</code>
+<code>$myvar = function ($a) {</code>
+<code>	echo $a;</code>
+<code>}</code>
+<code>$myvar("hello"); <mark class="comment">//Выведет hello</mark></code>
+<code class="next">$myvar(" "); <mark class="comment">//Выведет " "</mark></code>
+<code class="next">$myvar("world"); <mark class="comment">//Выведет world</mark></code>
+	</pre>
+	</section>	
+	<section class="slide">
+		<h2>Функции высшего порядка</h2>
+		<p>Могут принимать другие функции как аргументы.</p>
+		<p>Могуг возвращаться другие функции как аргументы.</p>
+		<p>PHP позволяет писать программы в функциональной парадигме, но это совсем другая история.</p>
+	</section>	
+	<section class="slide">
+		<h2>Применение функций высшего порядка</h2>
+		<pre>
+<code>function filter_array($arr, $filterFunct){</code>
+<code>	$result = array();</code>
+<code>	foreach($arr as $el) {</code>
+<code>		<mark class="important">if ($filterFunct($el)) $result[] = $el;</mark></code>
+<code>	}</code>
+<code>	return $result;</code>
+<code>}</code></pre>
+	</section>
+	<section class="slide">
+		<h2>Применение функций высшего порядка</h2>
+		<pre>
+		<code>$filter1 = function($val){ return $val == 1;};</code>
+		<code class="next">var_dump(filter_array($arr, $filter1));</code>
+		<code class="next">$filter2 = function($val){ return $val == 2;};</code>
+		<code class="next">var_dump(filter_array($arr, $filter2));</code>
+		<code class="next">$filter3 = function($val){return $val != "."};</code>
+		<code class="next">var_dump(filter_array($arr, $filter3));</code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Решение задачи в процедурном стиле</h2>
+		<p>Найти сумму цифр числа. Сумма 123 равняется 6.</p>
+		<pre>
+			<code>$number = "123";</code>
+			<code>$result = 0;</code>
+			<code>for($i = 0; $i < strlen($number); $i++) {</code>
+			<code>	$result += substr($number, $i, 1)</code>
+			<code>}</code>
+			<code>echo $result;</code>	
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Решение задачи в функциональном стиле</h2>
+		<p>Найти сумму цифр числа. Сумма 123 равняется 6.</p>
+		<pre>
+			<code>$number = "123";</code>
+			<code>echo array_sum(str_split($number));</code>	
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Самостоятельно</h2>
+		<ul>
+			<li>array_map</li>
+			<li class="next">array_reduce</li>
+			<li class="next">array_filter</li>
+			<li class="next">array_walk</li>
+			<li class="next">array_walk_recursive</li>
+			<li class="next">https://goo.gl/pVuuuX</li>
+		</ul>
+	</section>
+	<section class="slide black" id="cover-php">
+		<style>
+		#cover-php h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+		</style>
+		<h2 class="shout">ООП</h2>
+		<img src="pictures/code.jpg" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Программирование ориентированное на объекты</h2>
+		<p>ООП - это не только программирование, но и проектирование</p>
+		<p class="next">Объект - сущность наделенная состоянием и поведением.</p>
+		<p class="next">Я - это объект. Моё поведение - это то, что я могу делать.</p>
+		<p class="next">Моё состояние - это все мои характеристики, к примеру возраст или пол</p>
+	</section>	
+	<section class="slide">
+		<h2>Методы и свойства</h2>
+		<p>Свойста(атрибуты, поля) - это переменные или константы, которыми обладает объект. Мои свойства - возраст, пол, семейное положение.</p>
+		<p class="next"> Методы - это функции объекта, то что объект может делать.</p>
+		<p class="next">Кот Барсик - это объект. Его свойства или атрибуты - цвет и возраст. Его методы -  есть, пить, мяукать.</p>
+	</section>
+	<section class="slide">
+		<h2>Литература</h2>
+		<ul>
+			<li>«Объектно-ориентированный анализ и проектирование с примерами приложений», Гради Буч</li>
+			<li>PHP. Объекты, шаблоны и методики программирования, 	Мэт Зандстра</li>
+			<li><a href="https://medium.com/@annacherenshchykova/-98ffef738f1d">Шпаргалка</a></li>
+			<li><a href="https://habrahabr.ru/post/87119/">Хоть что-то</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Принципы ООП</h2>
+		<ul>
+			<li>Инкапсуляция</li>
+			<li>Наследование</li>
+			<li>Полиморфизм</li>
+			<li>*Абстра́кция</li>
+			<li>*Передача сообщений</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Инкапсуляция</h2>
+		<p style="text-align: center;">
+			<img src="pictures/incapsulation.gif" alt="">
+		</p>
+	</section>
+	<section class="slide">
+		<h2>Наследование</h2>
+		<p style="text-align: center;">
+			<img src="pictures/extends.gif" alt="">
+		</p>
+	</section>
+	<section class="slide">
+		<h2>Полиморфизм</h2>
+		<p>Способность потомков выполнять работу предков по-своему.</p>
+		<p>Я унаcледовал от отца метод идти. Но я это делаю другим образом, с другой ноги и другой походкой.</p>
+	</section>
+	<section class="slide">
+		<h2>Абстракция и передача сообщений</h2>
+		<p>Абстракция - выделение значимых характеристик объекта.</p>
+		<p>Передача сообщений - вызовы одним объектом методов другого. Объект я может вызвать метод включить ноутбук у объекта ноутбук, тем самым передав сообщение.</p>
+	</section>	
+	<section class="slide">
+			<h2>ООП - это развитие процедурного стиля</h2>
+			<pre>
+			<code><mark class="comment">//Данные отдельно - код отдельно</mark></code>
+			<code>$user = array("name" => "vasya");</code>
+			<code class="next">user_update($user, $new_data);</code>
+			<code class="next">user_delete($user);</code>
+			</pre>
+	</section>	
+	<section class="slide">
+		<h2>Почему бы не облегчить себе жизнь?</h2>
+		<pre>
+			<code>$userObj = new User("vasya");</code>
+			<code class="next">$userObj->update($newData);</code>
+			<code class="next">$userObj->delete();</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Класс и объект</h2>
+		<center><img src="pictures/class_object.jpg" alt=""></center>
+	</section>
+	<section class="slide">
+		<h2>Синтаксис</h2>
+		<pre>
+		<code>class Cat {</code>
+		<code>   public $name;</code>
+		<code>   function myau(){</code>
+		<code>       echo "myau";</code>
+		<code>   }</code>
+		<code>}</code>
+		<code class="next">$cat = new Cat();</code>
+		<code class="next">$cat2 = new Cat(); $cat2->myau();</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Задачи</h2>
+		<p>Создать классы и их объекты, присвоить значения:</p>
+		<ul>
+			<li>Класс Кофеварка, с методом варить кофе и свойством Объем воды.</li>		
+			<li>Класс Пользователь, с полями имя, фамилия, отчество, почта и методом получить ФИО.</li>
+</section>
+	<section class="slide">
+		<h2>Конструктор и $this</h2>
+		<pre>
+		<code>class Cat {</code>
+		<code>   public $name;</code>
+		<code>   function __construct($name){</code>
+		<code>       $this->name = $name;</code>
+		<code>   }</code>
+		<code>...</code>
+		</pre>		
+	</section>
+	<section class="slide">
+		<h2>Задачи</h2>
+		<p>Создать классы, атрибуты которых можно передавать в конструктор:</p>
+		<p>Класс Кот с атрибутами возраст и пол, а также методами мяукать и ходить.</p>
+		<p>Класс Статья с атрибутами название и автор и методом сохранить</p>
+	</section>
+	<section class="slide black">
+		<h2 class="shout">HTML&CSS</h2>
+		<img src="pictures/web_interfaces.jpg" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Псевдоклассы</h2>
+		<pre><code>Селектор:Псевдокласс { Описание правил стиля }</code></pre>
+		<p>Псевдоклассы определяют динамическое состояние элементов, которое изменяется с помощью действий пользователя, а также положение в дереве документа. </p>
+	</section>
+	<section class="slide">
+		<h2>Псевдоклассы состояний гиперссылок</h2>
+		<pre>
+<code>a:visited {color: green;}</code>
+<code class="next">a:hover {color: red;}</code>
+<code class="next">a:active {смена позиции}</code>			
+		</pre>
+	</section>
+	<section class="slide" id="links-pseudo">
+		<h2>Псевдоклассы состояний гиперссылок</h2>
+		<ul>
+			<style>
+				#links-pseudo a:visited {color: green;}
+				#links-pseudo a:hover {color: red;}
+				#links-pseudo a:active {position: relative; top: -10px; left: 5px;}
+			</style>
+			<li>Не посещенная — <a href="http://test.dz/test">a:link</a></li>
+			<li>Посещенная — по которой уже выполнялся переход — <a href="https://html5book.ru/css-css3/">a:visited</a></li>
+			<li>Не нажатая — над которой находится указатель мыши — <a href="http://google.com/?fdsfsdf">a:hover</a></li>
+			<li>Нажатая — которая удерживается мышью — <a href="http://google.com/?fdfsdf">a:active</a></li>
+			<li><a href="http://shpargalkablog.ru/2012/02/psevdoklassy-css.html">Тут много примеров</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Псевдоклассы состояний полей</h2>
+		<pre>
+<code>input:invalid {border: 2px solid red;}</code>
+<code class="next">input:valid {border: 2px solid green;}</code>
+<code class="next">input:focus {border: 2px solid gold;}</code>
+<code class="next">input:hover {смена позиции}</code>	
+		</pre>
+	</section>
+	<section class="slide" id = "forms-pseudo">
+		<h2>Псевдоклассы состояний полей</h2>
+		<style>
+			#forms-pseudo input {
+				margin-top: 5px;
+				height: 40px;
+				width: 300px;
+				padding: 5px;
+			}
+			#forms-pseudo input:invalid {
+				border: 2px solid red;
+			}
+			#forms-pseudo input:valid {
+				border: 2px solid green;
+			}
+			#forms-pseudo input:focus {
+				border: 2px solid gold;
+			}
+			#forms-pseudo input:hover {
+				position: relative;
+				top: 5px;
+				left: -5px;
+			}
+		</style>
+
+		<p><input type="text" placeholder="Просто текст"></p>
+		<p><input type="number" placeholder="Число от 1 до 5" min="1" max="5"></p>
+		<p><input type="email" placeholder="email"></p>
+	</section>
+	<section class="slide">
+		<h2>Короткая запись margin</h2>
+		<ul>
+			<li>margin-top</li>
+			<li>margin-left</li>
+			<li>margin-right</li>
+			<li>margin-bottom</li>
+			<li class="next">margin: [top] [right] [bottom] [left]</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Короткая запись border</h2>
+		<ul>
+			<li>border-width</li>
+			<li>border-style</li>
+			<li>border-color</li>
+			<li class="next">border: [border-width] [border-style] [border-color];
+</li>
+			<li class="next">border: 1px solid #111;</li>
+			<li class="next">border: 2px dotted #222;</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Короткая запись font</h2>
+		<ul>
+			<li>font: [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];</li>
+			<li class="next">font: 14px Georgia, serif;
+</li>
+			<li class="next">font: italic lighter 14px/1.4 Georgia, serif;</li>
+			<li class="next">font: italic small-caps lighter 14px/1.4 Georgia, serif;</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Поток документа</h2>
+		<blockquote>
+Порядок отображения элементов на странице называется потоком документа. Блочные элементы отображаются как прямоугольные области, идущие друг за другом сверху вниз, а строчные элементы располагаются сверху вниз и слева направо и при необходимости переносятся на новую строку.		
+		</blockquote>
+	</section>
+	<section class="slide">
+		<h2>Свойство position</h2>
+		<ul>
+			<li>static - по умолчанию</li>
+			<li class="next">relative - элемент можно сдвигать относительно родителя. Занимаемое им место сохраняется в потоке. Сдвиг происходит при помощи свойств top, right, bottom, left</li>
+			<li class="next">absolute - элемент вынимается из потока и позиционируются от блока контейнера со свойством не static</li>
+			<li class="next">fixed - фиксирует местоположение относительно окна браузера, удаляется из потока</li>
+		</ul>
+	</section>
+	<section class="slide" id="relative1">
+		<h2>position: relative;</h2>
+		<style>
+			#relative1 div {
+				background-color: gold;
+				height: 370px;
+				width: 350px;
+				padding: 10px;
+			}
+			#relative1 div:hover {
+				position: relative;
+				left: 100px;
+				top: 50px;
+			}
+		</style>
+		<div>			
+			<p>div:hover {</p>	
+			<p>	&nbsp;	&nbsp;	&nbsp;	&nbsp;position: relative; </p>	
+			<p>	&nbsp;	&nbsp;	&nbsp;	&nbsp;left: 100px;	</p>
+			<p>	&nbsp;	&nbsp;	&nbsp;	&nbsp;top: 50px;	</p>
+			<p>}	</p>
+	    </div>
+	</section>
+	<section class="slide" id="absolute">
+	<h2>position: absolute;</h2>
+
+		<button onclick="
+document.getElementById('relative-container').style.position ='relative';
+document.getElementById('absolute-child').style.position ='absolute';
+		">absolute</button>
+		<button onclick="
+document.getElementById('relative-container').style.position ='static';
+document.getElementById('absolute-child').style.position ='static';
+		">static</button>		
+		<div id="relative-container" class="corp-bgc" style="width: 600px; height: 300px; border: 3px dashed black;">
+			<div id="absolute-child" style="background-color: grey; width: 200px; height: 150px; top: 20px; left: 20px; padding: 10px;">
+			<p>top: 20px;</p> 
+			<p>left: 20px;</p>	
+			</div>	
+		</div>
+			
+	</section>
+	<section class="slide">
+		<h2>float</h2>
+		<blockquote>Определяет, по какой стороне будет выравниваться элемент, при этом остальные элементы будут обтекать его с других сторон. Когда значение свойства float равно none, элемент выводится на странице как обычно, при этом допускается, что одна строка обтекающего текста может быть на той же линии, что и сам элемент.</blockquote>
+	</section>
+	<section class="slide">
+		<h2>Пример</h2>
+		<div style="padding: 30px; background-color: gold; margin-right: 10px;">
+			<ul>
+				<li>padding: 30px; </li>
+				<li>background-color: gold; </li>
+				<li>margin-right: 10px;</li>
+			</ul>
+		</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cumque quaerat aliquid consequatur vitae modi ex illum, aspernatur laudantium, beatae.</div>
+	</section>	
+	<section class="slide">
+		<h2>Пример</h2>
+		<div style="padding: 30px; float: left; background-color: gold; margin-right: 10px;">
+			<ul>
+				<li>padding: 30px; </li>
+				<li>float: left;</li>
+				<li>background-color: gold; </li>
+				<li>margin-right: 10px;</li>
+			</ul>
+		</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cumque quaerat aliquid consequatur vitae modi ex illum, aspernatur laudantium, beatae.</div>
+	</section>
+	<section class="slide">
+		<div><div style="float: left;" class="corp-cube">left</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti commodi voluptates perspiciatis dolorum sapiente sint pariatur nulla a culpa mollitia placeat incidunt molestias veritatis quod, fuga nesciunt error et optio tempora doloremque?<div style="float: right;" class="corp-cube">right</div> Fuga tempore, natus. Expedita, autem! Nobis accusantium minus reiciendis ad quas, culpa aliquam delectus nemo exercitationem ut sint.</div>
+	</section>
+	<section class="slide">
+		<h2>clear - отменяет обтекание</h2>
+		<p>
+			Чтобы восстановить работу потока и отменить обтекание используется свойство clear: both; у следующего за плавающим элемента. 
+		</p>
+	</section>
+	<section class="slide" id="header-ex">
+		<h2>Пример шапки</h2>
+		<style>
+		#header-ex .header {
+			background-color: #000099;
+			width: 800px;
+			height: 200px;
+			position: relative;
+		}
+		#header-ex .logo {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+		}
+		#header-ex .form {
+			float: right;
+			padding: 40px;
+		}
+		</style>
+		<div class="header">
+			<div class="form">
+				<input type="text" placeholder="Поиск">
+			</div>		
+			<div class="logo corp-cube">logo</div>
+		</div>
+		<div>
+			<h3>Текст</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit autem, quod inventore rem velit magni!</p>
+		</div>
+	</section>
+	<section class="slide black" id="practice">
+		<style>
+		#practice h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+		</style>
+		<h2 class="shout">Пишем код</h2>
+		<img src="pictures/code.jpg" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Практическая работа</h2>
+		<p>Сверстать <a href="https://www.dropbox.com/s/l1kbaztdzi8gspb/%D1%81%D0%B0%D0%B9%D1%82.psd?dl=0
+">макет</a></p>
+		<p>Можно использовать для нарезки макета <a href="https://www.photopea.com/">Photopea</a></p>
+	</section>
+	<section class="slide">
+		<h2>Домашнее задание</h2>
+		<p>Задачник день 9</p>
+	</section>
+		<p class="badge">./
+			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remJove “progress” element.
+	-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

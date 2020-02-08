@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>День 14</h2>
+		<img src="pictures/iabs2.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+		-->
+		<style>
+			.corp-cube {
+				background-color: #FEDB37;
+				width: 300px;
+				height: 300px;
+				padding: 10px;
+				margin: 0 auto;
+			}
+			.corp-bgc {
+				background-color: #FEDB37;
+			}
+			#cover {
+				background-color: #FEDB37;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+		</style>
+	</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre>
+		<code>$arr = array(1);</code>
+		<code>$arr[] = 3;</code>
+		<code>echo $arr[1];</code>
+		<code class="next">var_dump($arr);</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre>
+		<code>$arr = array("t", "s", "o", "t");</code>
+		<code>$arr = array_reverse($arr);</code>
+		<code>foreach ($arr as $el) {</code>
+		<code>	echo $el;</code>
+		<code>}</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre>
+		<code>$arr = array("f");</code>
+		<code>foreach($arr as $k => $v) {</code>
+		<code>	$arr[$k] = "g";</code>
+		<code>}</code>
+		<code>echo $arr[0];</code>
+	</pre>
+</section>		
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	public $var = "test";</code>	
+		<code>	static function test(){</code>
+		<code>		echo $this->var;</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>Bubble::test();</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	public $var = "test";</code>	
+		<code>	static function test(){</code>
+		<code>		echo self::var;</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>Bubble::test();</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>  public $size = 10;</code>
+		<code>	function __construct($size){</code>
+		<code>		echo "test";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$bubble = new Bubble(30);</code>
+		<code>echo $bubble->size;</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre>
+		<code>abstract class Test {</code>
+		<code>	abstract public function hello();</code>
+		<code>}</code>
+		<code>$test = new Test;</code>
+		<code>$test->hello();</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre>
+		<code>class ChildTest extends Test {</code>
+		<code>	function hello(){</code>
+		<code>		echo "Hello";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$childTest = new ChildTest;</code>
+		<code>$childTest->hello();</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre>
+		<code>function test(Test $a){</code>
+		<code>	$a->hello();</code>
+		<code>}</code>
+		<code>test($childTest);</code>
+		<code>$article = new Article();</code>
+		<code>test($article);</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre>
+		<code>class SecondChildTest extends Test {</code>
+		<code>	function hi(){</code>
+		<code>		echo "Hello";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$secondChildTest = new SecondChildTest;</code>
+		<code>$secondChildTest->hi();</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тест</h2>
+	<pre>
+		<code>interface IBook {</code>
+		<code>	public function sold();</code>
+		<code>}</code>
+	</pre>		
+</section>
+<section class="slide">
+	<h2>Тест</h2>
+	<pre>
+		<code>class Book  implements IBook {</code>
+		<code>	public funtion sold() {</code>
+		<code>		echo "book solded";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$book = new Book();</code>
+		<code>$book->sold();</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тест</h2>
+	<pre>
+		<code>class Book  implements IBook {</code>
+		<code>	public funtion save() {</code>
+		<code>		echo "book saved";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$book = new Book();</code>
+		<code>$book->save();</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<ol>
+		<li>.main {position: relative; left: 10px;}</li>
+		<li class="next">.main {position: relative; left: 10px;}</li>
+		<li class="next">.main {position: absolute; top: 10px;}</li>
+		<li class="next">.main {position: static; top: 10px;}</li>
+		<li class="next">.main {position: fixed; top: 20px;}</li>
+		<li class="next">.main {position: fixed; left: 20px;}</li>
+	</ol>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<ul>
+		<li>SELECT * FROM posts;</li>
+		<li class="next">SELECT id FROM posts;</li>
+		<li class="next">SELECT * FROM posts WHERE date >= "2017-10-10";</li>
+		<li class="next">SELECT * FROM posts WHERE author = 'admin';</li>
+		<li class="next">SELECT author FROM posts WHERE id = 1;</li>		
+	</ul>
+</section>
+<section class="slide black" id="homework">
+	<style>
+		#homework h2 {
+			color: rgba(0, 255, 255, 0.9);
+		}
+	</style>
+	<h2 class="shout">Домашнее задание</h2>
+	<img src="pictures/day11/home.jpg" alt="" class="cover">		
+</section>
+<section class="slide" id="cover-php">
+	<style>
+	#cover-php h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">UML</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>UML</h2>
+	<p>UML (англ. Unified Modeling Language — унифицированный язык моделирования) — язык графического описания для объектного моделирования в области разработки программного обеспечения, моделирования бизнес-процессов, системного проектирования и отображения организационных структур.</p>
+</section>
+<section class="slide">
+	<h2>Диаграмма последовательности</h2>
+	<img src="pictures/day14/sequence.png" alt="" class="cover">		
+</section>
+<section class="slide">
+	<h2>Диаграмма классов</h2>
+	<p>
+		Диаграмма классов (англ. Static Structure diagram) — диаграмма, демонстрирующая классы системы, их атрибуты, методы и взаимосвязи между ними. 
+	</p>
+</section>
+<section class="slide">
+	<h2>Видимость</h2>
+	<table>
+		<tr>
+			<td>+</td>
+			<td>Публичный</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td>Приватный</td>
+		</tr>
+		<tr>
+			<td>#</td>
+			<td>Защищенный</td>
+		</tr>
+	</table>
+</section>
+<section class="slide">
+	<h2>Связь - реализация</h2>
+	<img style="height: 80%;" src="pictures/day14/realization.png" alt="" >
+</section>
+<section class="slide">
+	<h2>Код - реализация</h2>
+	<pre>
+		<code>interface Person{...}</code>
+		<code>class User implements Person {...}</code>
+		<code>class Client implements Person {...}</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Связь - генерализация(наследование)</h2>
+	<img style="height: 80%;" src="pictures/day14/generalization.png" alt="" >
+</section>
+<section class="slide">
+	<h2>Код - генерализация</h2>
+	<pre>
+		<code>class Page {...}</code>
+		<code>class LoginPage extends Page {...}</code>
+		<code>class IndexPage extends Page {...}</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Агрегация и Композиция</h2>
+	<p>Агрегация (агрегирование по ссылке) — отношение «часть-целое» между двумя равноправными объектами, когда один объект (контейнер) имеет ссылку на другой объект. Оба объекта могут существовать независимо: если контейнер будет уничтожен, то его содержимое — нет.</p>
+	<p class="next">Композиция (агрегирование по значению) — более строгий вариант агрегирования, когда включаемый объект может существовать только как часть контейнера. Если контейнер будет уничтожен, то и включённый объект тоже будет уничтожен.</p>
+</section>
+<section class="slide">
+	<h2>Агрегация и композиция</h2>
+	<img style="height: 80%;" src="pictures/day14/agregation_composition.png" alt="" >
+</section>
+<section class="slide">
+	<h2>Агрегация</h2>
+	<pre>
+	<code>class Article {</code>
+	<code>	protected $database;</code>
+	<code>	public function __construct(Database $database) {</code>
+	<code>		$this->database = $database;</code>
+	<code>	}</code>
+	<code>}</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Композиция</h2>
+	<pre>
+	<code>class Notebook {</code>
+	<code>	public $keyboard;</code>
+	<code>	public $monitor;</code>
+	<code>	public function __construct(){</code>
+	<code>		$this->keyboard = new Keyboard();</code>
+	<code>		$this->monitor = new Monitor();</code>
+	<code>	}</code>
+	<code>}</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Пример</h2>
+	<a href="exercise/day14/logger.mdj" download>Для программы StarUml</a>
+</section>
+<section class="slide black" id="cover-php">
+	<style>
+	#cover-php h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">PHP</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Ошибки</h2>
+	<p>Бывают фатальные и нефатальные.</p>
+	<p>Существует оператор подавления ошибок</p>
+	<pre class="next">
+		<code>@file_get_contents($test);</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Исключения</h2>
+	<p>Исключения — исключительные событие в PHP, в отличии от ошибок не просто констатируют наличие проблемы, а требуют от программиста дополнительных действий по обработке каждого конкретного случая.</p>
+</section>
+<section class="slide">
+	<h2>Практическая</h2>
+	<ul>
+		<li>Генерация исключений</li>
+		<li>Отлов исключений</li>
+		<li>Генерация различных классов исключений</li>
+		<li>Отличия 5х и 7х версий</li>
+	</ul>
+</section>
+<section class="slide black" id="cover-pattern">
+	<style>
+	#cover-pattern h2 {
+		color: rgba(0, 0, 0, .7);
+	}
+	</style>
+	<h2 class="shout">Паттерны или Шаблоны проектрования</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<img src="pictures/day14/3tier.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Определение</h2>
+	<p>Шаблоны проектирования — это проверенные и готовые к использованию решения часто возникающих в повседневном программировании задач. Это не класс и не библиотека, которую можно подключить к проекту, это нечто большее. Шаблон проектирования, подходящий под задачу, реализуется в каждом конкретном случае. Кроме того, он не зависит от языка программирования. Хороший шаблон легко реализуется в большинстве, если не во всех языках, в зависимости от выразительных средств языка. </p>
+</section>
+<section class="slide">
+	<h2>Единая точка входа</h2>
+	<p>В сложных веб-сайтах есть много одинаковых действий, которые надо производить во время обработки запросов. Это, например, контроль безопасности, многоязычность и настройка интерфейса пользователя. Когда поведение входного контроллера разбросано между несколькими объектами, дублируется большое количество кода. Помимо прочего возникают сложности смены поведения в реальном времени.</p>
+</section>
+<section class="slide">
+	<h2>Решение</h2>
+	<p>Все запросы направляются на один скрипт, который будет выполнять общие действия для всех компонентов системы и передавать обработку запроса нужному компоненту</p>
+	<p>Выбор нужного компонента называется <b>роутинг</b></p>
+	<p>Пример: Все запросу мы отправляем скрипту index.php?page=pageName и как get параметр мы передаем название страницы.</p>
+</section>
+<section class="slide">
+	<h1>Код index.php</h1>
+	<pre>
+		<code>require 'functions.php'</code>
+		<code>switch($_GET['page']) {</code>
+		<code>	case 'index': </code>
+		<code>		renderIndexPage(); break;</code>				
+		<code>	case 'contacts':</code>
+		<code>		renderContactsPage(); break;</code>				
+		<code>	default: </code>
+		<code>		render404();</code>
+		<code>}</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>MVC</h2>
+	<p>Этот шаблон разделяет работу веб-приложения на три отдельные функциональные роли: модель данных (model), пользовательский интерфейс (view) и управляющую логику (controller). Таким образом, изменения, вносимые в один из компонентов, оказывают минимально возможное воздействие на другие компоненты.</p>
+</section>
+<section class="slide">
+	<h2>Схема</h2>
+	<img style="display: block; margin: 0 auto;" src="pictures/day14/mvc.png" alt="" >
+</section>
+<section class="slide">
+	<h2>Практика</h2>
+	<p>
+		Напишем простое MVC приложение. Классы: Контроллер, Модель и View. Организуем единую точку входа. Познакомимся с PSR-4 стандартом. 
+		<a href="http://www.php-fig.org/psr/psr-4/">PSR-4 на английском</a>
+		<a href="http://fkn.ktu10.com/?q=node/7221">PSR-4 на русском</a>
+		<a href="https://github.com/itacademyIABS/web-program-materials/tree/master/students/simple_mvc">материалы</a>
+	</p>
+</section>
+<section class="slide black" id="cover-php">
+	<style>
+	#cover-php h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">БД</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Основные типы данных</h2>
+	<ul>
+		<li>INT - целые числа</li>
+		<li>FLOAT - числа с плавающией точкой</li>
+		<li>DECIMAL - числа с точным указанием чисел после запятой</li>
+		<li>CHAR, VARCHAR - хранение строк</li>
+		<li>TEXT - хранение больших текстов</li>
+		<li>DATE, DATETIME - хранение данных о дате</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Создание таблиц</h2>
+	<pre>
+		<code>CREATE TABLE test (</code>
+		<code>a FLOAT, </code>
+		<code>b INT, </code>
+		<code>c VARCHAR(50));</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Вставка данных</h2>
+	<pre>
+		<code>INSERT INTO articles </code>
+		<code>SET title = "title" , content = "content";</code>
+		<code class="next">INSERT INTO artciles(title, content) </code>
+		<code class="next">VALUES ("title1", "content1"),</code>
+		<code class="next">("title2", "content2");</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Обновление данных</h2>
+	<pre>
+		<code>UPDATE articles SET title = "title";</code>
+		<code class="next">UPDATE articles SET title = "title1.1" WHERE title = "title1";</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Практическая</h2>
+	<ul>
+		<li>Создать таблицу clients с полями id, name, balance</li>
+		<li>Добавить в таблицу несколько строк</li>	
+		<li>Создать таблицу invoice с полями id, client_id, amount, create_date</li>
+		<li>Добавить в таблицу несколько строк</li>
+		<li>Обновить имя у клиента с id = 1</li>
+		<li>Обнулить все балансы клиентов</li>
+		<li>Обновить сменить дату последнего счета на 1 день в перед</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Домашнее задание</h2>
+	<p>Задачник День 14</p>
+</section>
+		<p class="badge">
+			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remJove “progress” element.
+	-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

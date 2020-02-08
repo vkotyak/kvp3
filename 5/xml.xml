@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<people>
+    <person class="children">
+        <name>
+            <first_name>Ivan</first_name>
+            <second_name>Ivanovich</second_name>
+            <surname>Ivanov</surname>
+        </name>
+        <age>8</age>
+        <hobby>football</hobby>
+    </person>
+</people>

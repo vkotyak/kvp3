@@ -1,0 +1,171 @@
+/***** Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, serif;
+  font-size: 16px;
+}
+
+div.wrapper {
+  width: 800px;
+  margin: 0 auto;
+}
+
+
+/****************************** Шапка */
+header {
+  height: 56px;
+  min-width: 800px;
+  background: rgb(0,66,115); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(0,66,115,1) 35%, rgba(0,66,115,1) 35%, rgba(255,255,255,1) 35%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(0,66,115,1) 35%,rgba(а0,66,115,1) 35%,rgba(255,255,255,1) 35%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(0,66,115,1) 35%,rgba(0,66,115,1) 35%,rgba(255,255,255,1) 35%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004273', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */  
+}
+.logo-wapper {
+  background-color: #004273;
+  width: 200px;
+  height: 56px;
+  float: left;
+
+}
+.logo {
+  position: relative;
+  top: 10px;  
+}
+.menu {
+  line-height: 56px;    
+}
+.menu li {
+  display: inline;
+  float: right;
+  margin-left: 40px;
+}
+.menu li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color:  #161616;
+  font-family: ArialNarrow, Arial;
+}
+/************Женщина в ванной */
+
+.main-img {
+  background-image: url(https://i.imgur.com/aR48Ze2.jpg);
+  width: 1366px;
+  height: 561px;  
+  margin: 0 auto;
+}
+
+.main-text {
+  background-color:  rgba(0, 0, 0, 0.18);
+  width: 859px;
+  height: 286px;
+  position: relative;
+  top: 138px; /*(561-286)/2*/
+  padding: 60px 90px 40px 280px;
+}
+.main-text h1 {
+  color:  #ffffff;
+  font-size: 95px;
+  font-weight: 700;
+  letter-spacing: 4.75px;
+  text-transform: uppercase;
+}
+
+.main-text p {
+  font-size: 16px;
+  color:  #ffffff;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+  line-height: 14px;
+  text-align: justify;
+}
+/* Контент */ 
+.wrapper h2 {
+  color:  #004273;
+  font-size: 22px;
+  font-weight: 300;  
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;  
+}
+
+.wrapper hr {
+  border-width: 0.4166666666666667px;
+  border-color:  #000000;
+  border-style: solid;
+  opacity: 0.4;
+  width: 149px;
+  height: 2px;  
+  margin: 20px auto;
+}
+
+.wrapper p {
+  font-family: Arial;
+  color:  #5b5b5b;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: justify;
+}
+
+
+.productions li {
+  float: left;
+  list-style: none;
+  width: 46.125%;
+  height: 267px;
+  margin-bottom: 60px;
+  background-size: cover;
+  box-shadow: inset 370px 0px rgba(0, 66, 117, 0.35);
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.productions a {
+  text-decoration: none; 
+  color: #fff;
+  display: inline-block;
+  padding: 27px 35px;
+  margin-top: 95px;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.375;
+  text-transform: uppercase;
+  transition: .3s;
+  letter-spacing: 0.85px;
+}
+.productions a:hover {
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255,255,255,1);
+  -moz-box-shadow: 0px 0px 0px 2px rgba(255,255,255,1);
+  box-shadow: 0px 0px 0px 2px rgba(255,255,255,1);
+}
+
+
+.productions li:nth-child(even) {margin-left: 60px;}
+.productions li:nth-child(1) {
+  background-image: url(https://i.imgur.com/2kopQhT.png);
+}
+.productions li:nth-child(2) {
+  background-image: url(https://i.imgur.com/PhgouBU.png);
+}
+.productions li:nth-child(3) {
+  background-image: url(https://i.imgur.com/iUnXGkP.png);
+}
+.productions li:nth-child(4) {
+  background-image: url(https://i.imgur.com/viqpYsD.png);
+}
+
+.footer {
+  clear: both;
+	background-color:  #004273;
+	height: 51px;	
+	line-height: 51px;
+	text-align: center;
+  color: #D3D3D3;
+}

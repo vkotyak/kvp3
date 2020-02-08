@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>День 10</h2>
+		<img src="pictures/iabs2.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+		-->
+		<style>
+			.corp-cube {
+				background-color: #FEDB37;
+				width: 100px;
+				height: 100px;
+				padding: 10px;
+			}
+			.corp-bgc {
+				background-color: #FEDB37;
+			}
+			#cover {
+				background-color: #FEDB37;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+		</style>
+	</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre>
+<code>$arr = array("f");</code>
+<code>foreach($arr as $v) {</code>
+<code>	$v = "g";</code>
+<code>}</code>
+<code>echo $arr[0];</code>
+</pre>
+</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+    <pre><code>
+require 'functions.php';
+$a = 100;
+echo some_function($a);
+
+</code></pre>
+</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+	<ul>
+		<li>Что такое рекурсия?</li>
+		<li class="next">Что такое кукисы?</li>
+		<li class="next">Что такое сесиии?</li>
+		<li class="next">В чем разница между кукисами и сессиями?</li>
+		<li class="next">Что такое аутентификация?</li>
+	</ul>
+</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+	<ul>
+		<li>Что такое класс?</li>
+		<li class="next">Что такое объект?</li>
+		<li class="next">Что такое инкапсуляция?</li>
+		<li class="next">Что такое наследование?</li>
+		<li class="next">Что такое полиморфизм?</li>
+		<li class="next">Что такое передача сообщение в ООП?</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>		
+	<pre>
+		<code>class Bubble {</code>
+		<code>	public $size = 10;</code>
+		<code>}</code>
+		<code>$bubble = new Bubble;</code>
+		<code>echo $bubble->size;</code>
+		</pre>
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	public $size = 10;</code>
+		<code>}</code>
+		<code>$bubble = new Bubble;</code>
+		<code>$bubble->size = 20;</code>
+		<code>echo $bubble->size;</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	function test(){</code>
+		<code>		echo "red";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$bubble = new Bubble;</code>
+		<code>$bubble->test();</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	function test(){</code>
+		<code>		echo "red";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>Bubble->test();</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>  public $size = 10;</code>
+		<code>	function __construct($size){</code>
+		<code>		$this->size = $size;</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$bubble = new Bubble;</code>
+		<code>echo $bubble->size;</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>  public $size = 10;</code>
+		<code>	function __construct($size){</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$bubble = new Bubble;</code>
+		<code>echo $bubble->size;</code>
+		</pre>	
+</section>
+	<section class="slide">
+		<h2>Тесты</h2>
+		<pre>
+<code>&lt;?php</code>
+<code>function test($a = "habra", $b = "habr") {</code>
+<code>	echo $a . $b;</code>
+<code>}</code>
+<code class="next">test(); <mark class="comment">//Выведет ???</mark></code>
+<code class="next">test("foo"); <mark class="comment">//Выведет ???</mark></code>
+		</pre>
+	</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+	<ol>
+		<li>a {...}</li>
+		<li class="next">.a {...}</li>
+		<li class="next">#a {...}</li>
+		<li class="next">#a a{...}</li>
+		<li class="next">.a #a{...}</li>
+		<li class="next">.main {...}</li>
+	</ol>
+</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+	<ol>
+		<li>.main > div {...}</li>
+		<li class="next">.second div {...}</li>
+		<li class="next">.third > .block {...}</li>
+		<li class="next">.main+div {...}</li>
+		<li class="next">div+p {...}</li>
+		<li class="next">a[href] {...}</li>
+		</ol>
+	</section>	
+	<section class="slide">
+		<h2>Тесты</h2>
+		<ol>
+			<li>.main {position: relative; top: 10px;}</li>
+			<li class="next">.main {position: relative; left: 10px;}</li>
+			<li class="next">.main {position: absolute; top: 10px;}</li>
+			<li class="next">.main {position: static; top: 10px;}</li>
+			<li class="next">.left {float: left;}</li>
+			<li class="next">.right {float: right;}</li>
+			<li class="next">.next {clear: both;}</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Тесты</h2>
+		<ol>
+			<li>a:visited {...}</li>
+			<li class="next">a:hover  {...}</li>
+			<li class="next">.main:hover  {...}</li>
+			<li class="next">input:invalid  {...}</li>
+			<li class="next">input:focus  {...}</li>
+			<li class="next">input:valid  {...}</li>
+		</ol>
+	</section>
+	<section class="slide" id="yellow-string">
+	<style>
+		#yellow-string>span {
+			background-color: #FEDB37;
+			margin-left: 20px;
+			padding-left: 200px;
+		}
+	</style>
+		<h2>Строчные или блочные?</h2>
+		<span></span>
+		<span></span>
+		<span></span>
+		</section>		
+	<section class="slide" >
+	<h2>Какой селектор более специфичный?</h2>
+	<ul>
+		<li>ul - #id</li>
+		<li class="next">div a - .main</li>
+		<li class="next">#main - .main</li>
+		<li class="next">a[href] - .main</li>
+		<li class="next">#id - .main li</li>
+		<li class="next">ul li - div a</li>
+	</ul>
+
+	</section>	
+	<section class="slide">
+		<h2>Что делают эти свойства?</h2>
+		<ol>
+			<li>font-weight</li>
+			<li class="next">text-align</li>
+			<li class="next">font-size</li>
+			<li class="next">font-family</li>			
+			<li class="next">@font-face</li>
+			<li class="next">line-height</li>
+		</ol>
+	</section>	
+	<section class="slide">
+		<h2>Таблицы</h2>
+		<pre>
+		<code>
+&lt;table&gt; 
+	&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;	
+		</code>	
+		</pre>
+	</section>	
+
+	<section class="slide black" id="cover-php">
+		<style>
+		#cover-php h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+		</style>
+		<h2 class="shout">PHP</h2>
+		<img src="pictures/code.jpg" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Статические переменные функций</h2>
+		<pre>
+				<code>function test(){</code>
+				<code>    $test = 3;</code>
+				<code>    echo $test;</code>
+				<code>    if ($test == 3) $test = 2;</code>
+				<code>}</code>
+				<code>test(); // Что выведет?</code>
+				<code>test(); // Что выведет?</code>			
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Статические переменные функций</h2>
+		<pre>
+				<code>function test(){</code>
+				<code>    <mark class="important">static</mark> $test = 3;</code>
+				<code>    echo $test;</code>
+				<code>    if ($test == 3) $test = 2;</code>
+				<code>} </code>
+				<code>test(); // Выведет 3</code>
+				<code class="next">test(); // Выведет 2</code>
+				<code class="next">test(); // Выведет 2</code>			
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Применение - кеширование</h2>
+		<pre>
+			<code>function calculate_report(){</code>
+			<code>    static $data = null;</code>
+			<code>    if ($data == null) {</code>
+			<code>        $data = ... <mark class="comment">//Очень тяжелые вычисления</mark></code>
+			<code>    }</code>
+			<code>    return $data;</code>
+			<code>}</code>				
+		</pre>
+	</section>
+	<section class="slide">
+		<pre>
+			<code>function stopwatch() {</code>
+			<code>    static $start = null;</code>
+			<code>    if (empty($start)) {</code>
+			<code>        $start = microtime(true);</code>
+			<code>    } else {</code>
+			<code>        $end = microtime(true);</code>
+			<code>        $execution_time = $end - $start;</code>
+			<code>        $start = null;</code>
+			<code>        return $execution_time;</code>
+			<code>    }</code>
+			<code>}</code>		
+		</pre>
+	</section>
+	<section class="slide black" id="cover-oop">
+		<style>
+		#cover-oop h2 {
+			color: rgb(255, 255, 255);
+			top: 30%;
+		}
+		</style>
+		<h2 class="shout">ООП</h2>
+		<img src="pictures/day10/lights.jpg" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Константы классов</h2>
+		<pre>
+			<code>class Currency {</code>
+			<code>	const EUR = 'eur';</code>
+			<code>	const USD = 'usd';</code>
+			<code>	const UAH = 'uah';</code>
+			<code>}</code>
+			<code class="next">echo Currency::EUR; <mark class="comment">//Выведет eur</mark></code>
+			<code class="next">echo Currency::USD; <mark class="comment">//Выведет usd</mark></code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Ключевое слово self</h2>
+		<pre>
+			<code>class Currency {</code>
+			<code>    const EUR = "eur";</code>
+			<code>    const UAH = "uah";</code>
+			<code>    function calculate($amount, $currency) {</code>
+			<code>        if ($currency == self::EUR) {</code>
+			<code>            return $amount * 30;</code>
+			<code>        }</code>
+			<code>    }    </code>
+			<code>}</code>
+			<code class="next">$c = new Currency;</code>
+			<code class="next">echo $c->calculate(1, Currency::EUR);</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Статические свойства принадлежат классу</h2>
+		<pre>
+			<code>class Currency {</code>
+			<code>    <mark class="important">static</mark> public $currencyEUR = 30;</code> 
+			<code>    function getCurrencyEUR(){</code>
+			<code>        return self::$currencyEUR;</code>
+			<code>    }</code>
+			<code>}</code>
+		
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Статические свойства принадлежат классу</h2>
+		<pre>
+			<code>$c = new Currency();</code>
+			<code>$c2 = new Currency();</code>
+			<code class="next"><mark class="important">Currency::$currencyEUR</mark> = 100;</code>
+			<code class="next">echo "c1: ", $c->getCurrencyEUR();</code>
+			<code class="next">echo "c2: ", $c2->getCurrencyEUR();</code>			
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Статические методы можно вызвать без объекта</h2>
+		<pre>
+			<code>class Currency {</code>
+			<code>    static public $currencyEUR = 30;</code> 
+			<code>    <mark class="important">static</mark> function getCurrencyEUR(){</code>
+			<code>        return self::$currencyEUR;</code>
+			<code>    }</code>
+			<code>}</code>
+			<code>echo Currency::getCurrencyEUR();</code>
+		</pre>
+	</section>	
+	<section class="slide black">
+		<h2>Наследование</h2>
+		<img src="pictures/day10/parent.jpg" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Синтаксис наследования</h2>
+		<pre>
+		<code>class Parent {</code>
+		<code>	function eat(){echo "i am eating...";}</code>
+		<code>}</code>
+		<code>class Child <mark class="important">extends Parent</mark> {</code>
+		<code>	function go(){</code>
+		<code>		echo "i am going...";</code>
+		<code>	}</code>
+		<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Использование</h2>
+		<pre>
+			<code>$child = new Child();</code>
+			<code>$child->go();</code>
+			<code>$child->eat();</code>
+			<code class="next">$parent = new Parent();</code>
+			<code class="next">$parent->eat();</code>
+			<code class="next">$parent->go(); <mark class="important">//выдаст ошибку</mark></code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Полиморфизм</h2>
+		<pre>		<code>class Parent {</code>
+		<code>	function eat(){echo "i am eating...";}</code>
+		<code>}</code>
+		<code>class Child <mark class="important">extends Parent</mark> {</code>
+		<code>	function eat(){</code>
+		<code>		<mark class="important">echo "i am eating another..."</mark>;</code>
+		<code>	}</code>
+		<code>}</code>
+		</pre>
+
+	</section>
+	<section class="slide">
+		<h2>Полиморфизм</h2>
+		<pre>
+			<code>function eatObject($object) {</code>
+			<code>	$object->eat();</code>
+			<code>}</code>
+			<code class="next">$child = new Child();</code>
+			<code class="next">$parent = new Parent();</code>
+			<code class="next">eatObject($child);</code>
+			<code class="next">eatObject($parent);</code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>parent::</h2>
+		<pre>
+			<code>class Parent {</code>
+			<code>	function eat(){echo "i am eating...";}</code>
+			<code>}</code>
+			<code>class Child <mark class="important">extends Parent</mark> {</code>
+			<code>	function eat(){</code>
+			<code>		parent::eat();</code>
+			<code>		echo "and eat something else"; </code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Модификаторы доступа</h2>
+		<p>Применяется к свойствам и методам</p>
+		<ul>
+			<li>public - доступно отовсюду</li>
+			<li class="next">protected - доступен внутри класса и в наследниках</li>
+			<li class="next">private - доступен только внутри класса</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Пример</h2>
+		<pre>
+			<code>class Test {</code>
+			<code>	public $var1 = "test";</code>
+			<code>	protected $var2 = "test2";</code>
+			<code>	private $var3 = "test3";</code>
+			<code>}</code>
+			<code>$test = new Test;</code>
+			<code >echo $test->var1;</code>
+			<code class="next">echo $test->var2; <mark class="comment">Выдаст ошибку</mark> </code>
+			<code class="next">echo $test->var3; <mark class="comment">Выдаст ошибку</mark></code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Пример</h2>
+		<pre>
+			<code>class Test {</code>
+			<code>	public $var1 = "test";</code>
+			<code>	protected $var2 = "test2";</code>
+			<code>	private $var3 = "test3";</code>
+			<code>	function some(){</code>
+			<code>		echo $this->var1;</code>
+			<code>		echo $this->var2;</code>
+			<code>		echo $this->var3;</code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Задача</h2>
+		<p>Нужно создать класс родитель Конечность(Limb) с публичным методом move и защищенным свойством type. Унаследовать от него классы Рука(Hand) и Нога(Leg). Создать класс Человек. У которого есть защищенное свойство конечности. Это массив из двух рук и двух ног. Руки и ноги инициализируются при создании человека. У человека есть публичный метод move и защищенные методы moveHand и moveLeg</p>
+	</section>
+	<section class="slide">
+		<h2>Игра "Кости" в ООП стиле</h2>
+		<p>Правила: Есть несколько игроков. Игра проходит в 3 тура. Правило тура: Игрок бросает кости 1 раз, выброшенные очки суммируются игроку. Побеждает - набравший больше всех очков.</p>
+		<p><a href="http://phpfiddle.org/main/code/atre-pm79">Игра "Кости"</a></p>		
+	</section>		
+	<section class="slide">
+		<h2>Диаграмма</h2>		
+		<img src="pictures/day10/OOP.png" alt="">
+		<p>ДЗ: Нарисуйте как вы видите игру BlackJack в ООП стиле.</p>
+	</section>		
+	<section class="slide black">
+		<h2 class="shout">HTML&CSS</h2>
+		<img src="pictures/web_interfaces.jpg" class="cover">
+	</section>
+	<section class="slide">
+		<h2>CSS 3</h2>
+		<p>
+CSS3 (англ. Cascading Style Sheets 3 — каскадные таблицы стилей третьего поколения) — активно разрабатываемая спецификация CSS. 			
+		</p>
+	</section>	
+	<section class="slide">
+		<h2>Вендорные префиксы</h2>
+		<p>
+Это приставки (префиксы), используемые производителями (вендорами) браузеров для экспериментальных, еще не принятых в стандарт, CSS-свойств. Приведу список некоторых префиксов для наиболее распространенных браузеров.		
+		</p>
+	</section>	
+	<section class="slide">
+		<h2>Вендорные префиксы</h2>
+		<ul>
+			<li>-o- — префикс для браузера Опера</li>
+			<li>-moz- — префикс для браузеров из семейства Mozilla</li>
+			<li>-ms — префикс для Интернет Експлорера 8 </li>
+			<li>-webkit- — префикс для браузеров, построенных на движке Webkit</li>
+			<li>-icab- — префикс для браузера iCab </li>
+		</ul>
+	</section>	
+	<section class="slide">
+		<pre>
+		<h2>Правильное использование</h2>
+		<code>div {</code>
+		<code>	-webkit-box-shadow: 0 0 10px #000;</code>	
+		<code>	-moz-box-shadow: 0 0 10px #000;	</code>
+		<code>	<mark class="important">box-shadow: 0 0 10px #000;</mark></code>		
+		<code>}</code>
+		</pre>
+	</section>
+	<section class="slide" id="boxed">
+		<h2>background-color</h2>
+		<style>
+		#boxed * {box-sizing: border-box;}
+		#boxed .container {width: 100%; height: 600px;}
+		#boxed .container div {margin: 10px; width: 45%; height: 30%; padding: 10px;}
+		#boxed .left {float: left;}
+		#boxed .right {float: right;}
+		</style>
+		<div class="container clearfix">
+			<div class="left" style="background-color: #FF6633;">background-color: #FF6633;</div>
+			<div class="right next" style="background-color: gray;">background-color: gray;</div>
+			<div class="left next" style="background-color: rgb(153,0,51);">background-color: rgb(153,0,51);</div>
+			<div class="right next" style="background-color: rgba(153,0,51,.5);">background-color: rgba(153,0,51,.8);</div>
+		</div>
+	</section>
+	<section class="slide" id="boxed2">
+		<h2>background-image и background-repeat</h2>
+		<style>
+		#boxed2 * {box-sizing: border-box;}
+		#boxed2 .container {width: 100%; height: 600px;}
+		#boxed2 .container div {margin: 10px; width: 45%; height: 30%; padding: 10px; background-image: url('pictures/day10/twitter2_6005.png'); font-weight: bold;}
+		#boxed2 .left {float: left;}
+		#boxed2 .right {float: right;}
+		</style>
+		<div class="container clearfix">
+			<div class="left" style="">
+			<ol>
+				<li>background-image: url('img/twitter2_6005.png');</li>
+				<li>background-repeat: repeat;</li>
+			</ol>
+			</div>
+			<div class="right next" style="background-repeat: repeat-x;">
+			<ol>
+				<li>background-image: url('img/twitter2_6005.png');</li>
+				<li>background-repeat: repeat-x;</li>
+			</ol>
+			</div>
+			<div class="left next" style="background-repeat: repeat-y;">
+			<ol>
+				<li>background-image: url('img/twitter2_6005.png');</li>
+				<li>background-repeat: repeat-y;</li>
+			</ol>				
+			</div>
+			<div class="right next" style="background-repeat: no-repeat; next">
+			<ol>
+				<li>background-image: url('img/twitter2_6005.png');</li>
+				<li>background-repeat: no-repeat;</li>
+			</ol>					
+			</div>
+		</div>
+	</section>	
+	<section class="slide" id="boxed3">
+		<h2>background-position</h2>
+		<style>
+		#boxed3 * {box-sizing: border-box;}
+		#boxed3 .container {width: 100%; height: 600px;}
+		#boxed3 .container div {margin: 10px; width: 45%; height: 30%; padding: 10px; background-image: url('pictures/day10/twitter2_6005.png'); font-weight: bold;}
+		#boxed3 .left {float: left;}
+		#boxed3 .right {float: right;}
+		</style>
+		<div class="container clearfix">
+			<div class="left" style="background-position: center center;">
+			<ol>
+				<li>background-position: center center;</li>
+			</ol>
+			</div>
+			<div class="right next" style="background-repeat: no-repeat; background-position: center center;">
+			<ol>
+				<li>background-repeat: no-repeat;</li>
+				<li>background-position: center center;</li>
+			</ol>
+			</div>
+			<div class="left next" style="background-repeat: no-repeat; background-position: 50% 100%;">
+			<ol>
+				<li>background-position: 50% 100%;</li>
+			</ol>				
+			</div>
+			<div class="right next" style="background-repeat: no-repeat; background-position: left;">
+			<ol>
+				<li>background-position: left;</li>
+			</ol>						
+			</div>
+		</div>
+	</section>
+	<section class="slide" id="boxed4">
+		<h2>background-image: linear-gradient</h2>
+		<style>
+		#boxed4 * {box-sizing: border-box;}
+		#boxed4 .container {width: 100%; height: 600px;}
+		#boxed4 .container div {margin: 10px; width: 45%; height: 30%; padding: 10px; font-weight: bold;}
+		#boxed4 .left {float: left;}
+		#boxed4 .right {float: right;}
+		</style>
+		<div class="container clearfix">
+			<div class="left" style="background-image: linear-gradient( blue, red);
+">
+			<ol>
+				<li>background-image: linear-gradient( blue, red);</li>
+			</ol>
+			</div>
+			<div class="right next" style="background-image: linear-gradient(to left, blue, red);">
+			<ol>
+				<li>background-image: linear-gradient(to left, blue, red);</li>
+			</ol>
+			</div>
+			<div class="left next" style="background-image: linear-gradient(45deg, blue, red);">
+			<ol>
+				<li>background-image: linear-gradient(45deg, blue, red);</li>
+			</ol>				
+			</div>
+			<div class="right next" style="background-image: linear-gradient(45deg, blue 80%, red);">
+			<ol>
+				<li>background-image: linear-gradient(-45deg, blue 80%, red);</li>
+			</ol>						
+			</div>
+		</div>
+	</section>		
+	<section class="slide" id="boxed5">
+		<h2>background-image: radial-gradient</h2>
+		<style>
+			#boxed5 * {box-sizing: border-box;}
+			#boxed5 .container {width: 100%; height: 600px;}
+			#boxed5 .container div {margin: 10px; width: 45%; height: 30%; padding: 10px; font-weight: bold;}
+			#boxed5 .left {float: left;}
+			#boxed5 .right {float: right;}
+		</style>
+		<div class="container clearfix">
+			<div class="left" style="background-image: radial-gradient( blue, red);
+">
+			<ol>
+				<li>background-image: radial-gradient( blue, red);</li>
+			</ol>
+			</div>
+			<div class="right next" style="background-image: radial-gradient(circle, blue, red);">
+			<ol>
+				<li>background-image: radial-gradient(circle,blue, red);</li>
+			</ol>
+			</div>
+			<div class="left next" style="background-image: radial-gradient(circle at left, blue, red);">
+			<ol>
+				<li>background-image: radial-gradient(circle at left, blue, red);</li>
+			</ol>				
+			</div>
+			<div class="right next" style="background-image: radial-gradient(40% 50%, blue, red);">
+			<ol>
+				<li>background-image: radial-gradient(40% 50%, blue, red);</li>
+			</ol>						
+			</div>
+		</div>
+	</section>
+	<section class="slide black" id="cover-oop">
+		<style>
+		#cover-oop h2 {
+			color: rgb(255, 255, 255);
+			top: 30%;
+		}
+		</style>
+		<h2 class="shout">Верстаем</h2>
+		<img src="pictures/day10/lights.jpg" alt="" class="cover">
+	</section>	
+	<section class="slide">
+		<h2>Практическая работа</h2>
+		<ul>
+			<li><a href="https://drive.google.com/file/d/0BxvcE4tccqEXVWstWUpsWFpKSTg/view?usp=sharing
+">Макет</a></li>
+			<li><a href="exercise/day10/Olympia/images/woman.jpg">Картинка</a></li>
+			<li><a href="exercise/day10/Olympia/images/logo.png">Логотип</a></li>
+			<li><a href="https://codepen.io/OlVart/pen/eYOgZMv">Верстка в codepen</a></li>
+			<li><a href="https://codepen.io/OlVart/pen/abopNXY">Шпаргалка</a></li>
+		</ul>	
+		<p style="font-size: 20px">(Если не загрузилось изображение в макете - откройте их по разу отдельно для загрузки в кеш)</p>	
+	</section>	
+	<section class="slide">
+		<h2>Домашнее задание</h2>
+		<p>Задачник День 10</p>
+	</section>
+		<p class="badge">./
+			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remJove “progress” element.
+	-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

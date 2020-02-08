@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>День 11</h2>
+		<img src="pictures/iabs2.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+		-->
+		<style>
+			.corp-cube {
+				background-color: #FEDB37;
+				width: 300px;
+				height: 300px;
+				padding: 10px;
+				margin: 0 auto;
+			}
+			.corp-bgc {
+				background-color: #FEDB37;
+			}
+			#cover {
+				background-color: #FEDB37;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+		</style>
+	</section>
+	<section class="slide black" id="homework">
+		<style>
+			#homework h2 {
+				color: rgba(0, 255, 255, 0.9);
+			}
+		</style>
+		<h2 class="shout">Домашнее задание</h2>
+		<img src="pictures/day11/home.jpg" alt="" class="cover">		
+	</section>
+	<section class="slide">
+		<h2>Контрольная работа</h2>
+		<a href="http://phpfiddle.org/main/code/d79n-182i">Задание</a>
+	</section>
+	<section class="slide">
+		<h2>Использование статического вызова ::</h2>
+		<pre>
+			<code>class A {</code>
+			<code>	public function a(){</code>
+			<code>		echo "test";</code>
+			<code>	}</code>
+			<code>}</code>
+			<code>A::a(); <mark class="comment">//можно вызвать так, но нельзя</mark></code>
+			<code class="next">$a = new A(); <mark class="comment">//нужно так</mark></code>
+			<code class="next"><mark class="important">$a->a();</mark></code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Статический вызов для статических методов</h2>
+		<pre>
+			<code>class A {</code>
+			<code>	<mark class="important">static</mark> public function a(){</code>
+			<code>		echo "test";</code>
+			<code>	}</code>
+			<code>}</code>
+			<code><mark class="important">A::a();</mark> <mark class="comment">//теперь можно</mark></code>
+		</pre>
+	</section>	
+	<section class="slide black" id="cover-php">
+		<style>
+		#cover-php h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+		</style>
+		<h2 class="shout">PHP</h2>
+		<img src="pictures/code.jpg" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Тест</h2>
+		<pre>
+			<code>$g = "World";</code>
+			<code>$c = function($a){</code>
+			<code>	echo $a . $g;</code>
+			<code>}</code>
+			<code>$c("Hello");</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Замыкания</h2>
+		<pre>
+			<code>$g = 'World';</code>
+			<code>$c = function($a) use($g){</code>
+			<code>    echo $a . " " .  $g;</code>
+			<code>};</code>
+			<code class="next">$c("Hello ");</code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Применение</h2>
+		<pre>
+			<code>function getRangeValidator($min, $max){</code>
+			<code>	return function($v) use ($min, $max){</code>
+			<code>		return ($v >= $min && $v <= $max) </code>
+			<code>       	? true </code>
+			<code>       : “Значение не попадает в промежуток”;</code>
+			<code>	};</code>
+			<code>}	</code>		
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Классы как типы данных</h2>
+		<p>Типы данных определяют, что можно делать с переменными этого типа. Классы по сути грают ту же роль. Класс объекта решает, что вы можете с ним сделать и какие методы и свойства класса использовать.</p>
+	</section>
+	<section class="slide">
+		<h2>Работа с классами</h2>
+		<pre>
+			<code>class ParentClass{}</code>			 
+			<code>class MyClass extends ParentClass{}</code>			 
+			<code>$a = new MyClass;</code>			 
+			<code>var_dump($a instanceof MyClass); // вернет true</code>
+			<code>var_dump($a instanceof ParentClass); // вернет true</code>			
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Проверка типов</h2>
+		<pre>
+			<code>function test(array $a) {</code>
+			<code>	var_dump($a);</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Так же работает и для классов</h2>
+		<pre>
+			<code>function test(MyClass $a) {</code>
+			<code>	var_dump($a);</code>
+			<code>}</code>			
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Зачем?</h2>
+		<ul>
+			<li>Выявить ошибку раньше</li>
+			<li class="next">Писать более понятный код</li>
+			<li class="next">Помочь вашей IDE</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Практическая работа</h2>
+		<p>Написать сайт, материалы которого лежат в директории articles. Каждая статья это отдельный файл. В файле заголовок и тело статьи разделены разделителем. На главной странице сайта выводится список статей с ссылками на них.</p>
+		<a href="exercise/day11/articles.tar.gz">Материалы</a>
+		<p><a href="https://github.com/itacademyIABS/web-programmers-presentation/tree/master/exercise/day11">готовый пример для проверки</a></p>
+	</section>
+	<section class="slide">
+		<img src="pictures/day11/SimpleMVC.png" alt="">
+	</section>
+	<section class="slide">
+		<h2>Домашнее задание</h2>
+		<p>Задачник День 11</p>	
+	</section>	
+		<p class="badge">./
+			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remJove “progress” element.
+	-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

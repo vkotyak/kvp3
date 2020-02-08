@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>День 12</h2>
+		<img src="pictures/iabs2.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+		-->
+		<style>
+			.corp-cube {
+				background-color: #FEDB37;
+				width: 300px;
+				height: 300px;
+				padding: 10px;
+				margin: 0 auto;
+			}
+			.corp-bgc {
+				background-color: #FEDB37;
+			}
+			#cover {
+				background-color: #FEDB37;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+		</style>
+	</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<ul>
+		<li>Что такое класс?</li>
+		<li class="next">Что такое объект?</li>
+		<li class="next">Что такое инкапсуляция?</li>
+		<li class="next">Что такое наследование?</li>
+		<li class="next">Что такое полиморфизм?</li>
+		<li class="next">Что такое передача сообщение в ООП?</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>		
+	<pre>
+		<code>class Bubble {</code>
+		<code>	public $size = 10;</code>
+		<code>}</code>
+		<code>$bubble = new Bubble;</code>
+		<code>echo $bubble->size;</code>
+		</pre>
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	public $size = 10;</code>
+		<code>}</code>
+		<code>$bubble = new Bubble;</code>
+		<code>$bubble->size = 20;</code>
+		<code>echo $bubble->size;</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	function test(){</code>
+		<code>		echo "red";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$bubble = new Bubble;</code>
+		<code>$bubble->test();</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	function test(){</code>
+		<code>		echo "red";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>Bubble->test();</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	static function test(){</code>
+		<code>		echo "red";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>Bubble::test();</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	public $var = "test";</code>	
+		<code>	static function test(){</code>
+		<code>		echo $this->var;</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>Bubble::test();</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>	public $var = "test";</code>	
+		<code>	static function test(){</code>
+		<code>		echo self::var;</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>Bubble::test();</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>  public $size = 10;</code>
+		<code>	function __construct($size){</code>
+		<code>		$this->size = $size;</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$bubble = new Bubble(20);</code>
+		<code>echo $bubble->size;</code>
+		</pre>	
+</section>
+<section class="slide">
+	<h2>Тесты	</h2>
+		<pre>
+		<code>class Bubble {</code>
+		<code>  public $size = 10;</code>
+		<code>	function __construct($size){</code>
+		<code>	}</code>
+		<code>}</code>
+		<code>$bubble = new Bubble(30);</code>
+		<code>echo $bubble->size;</code>
+		</pre>	
+</section>
+	<section class="slide">
+		<h2>Тесты</h2>
+		<pre>
+<code>&lt;?php</code>
+<code>function test($a = "habra", $b = "habr") {</code>
+<code>	echo $a . $b;</code>
+<code>}</code>
+<code class="next">test(); <mark class="comment">//Выведет ???</mark></code>
+<code class="next">test("foo"); <mark class="comment">//Выведет ???</mark></code>
+		</pre>
+	</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+	<ol>
+		<li>a {...}</li>
+		<li class="next">.a {...}</li>
+		<li class="next">#a {...}</li>
+		<li class="next">#a a{...}</li>
+		<li class="next">.a #a{...}</li>
+		<li class="next">.main {...}</li>
+	</ol>
+</section>	
+	<section class="slide">
+		<h2>Тесты</h2>
+		<ol>
+			<li>.main {position: relative; top: 10px;}</li>
+			<li class="next">.main {position: relative; left: 10px;}</li>
+			<li class="next">.main {position: absolute; top: 10px;}</li>
+			<li class="next">.main {position: static; top: 10px;}</li>
+			<li class="next">.left {float: left;}</li>
+			<li class="next">.right {float: right;}</li>
+			<li class="next">.next {clear: both;}</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Тесты</h2>
+		<ol>
+			<li>a:visited {...}</li>
+			<li class="next">a:hover  {...}</li>
+			<li class="next">.main:hover  {...}</li>
+			<li class="next">input:invalid  {...}</li>
+			<li class="next">input:focus  {...}</li>
+			<li class="next">input:valid  {...}</li>
+		</ol>
+	</section>
+	<section class="slide" >
+	<h2>Какой селектор более специфичный?</h2>
+	<ul>
+		<li>ul - #id</li>
+		<li class="next">div a - .main</li>
+		<li class="next">#main - .main</li>
+		<li class="next">a[href] - .main</li>
+		<li class="next">#id - .main li</li>
+		<li class="next">ul li - div a</li>
+	</ul>
+
+	</section>	
+	<section class="slide">
+		<h2>Что делают эти свойства?</h2>
+		<ol>
+			<li>font-weight</li>
+			<li class="next">text-align</li>
+			<li class="next">font-size</li>
+			<li class="next">font-family</li>			
+			<li class="next">@font-face</li>
+			<li class="next">line-height</li>
+		</ol>
+	</section>		
+	<section class="slide black" id="homework">
+		<style>
+			#homework h2 {
+				color: rgba(0, 255, 255, 0.9);
+			}
+		</style>
+		<h2 class="shout">Домашнее задание</h2>
+		<img src="pictures/day11/home.jpg" alt="" class="cover">		
+	</section>
+	<section class="slide black" id="cover-php">
+		<style>
+		#cover-php h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+		</style>
+		<h2 class="shout">PHP</h2>
+		<img src="pictures/code.jpg" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2 class="shout" style="color: black;">Colobot</h2>
+		<img src="pictures/day12/colobot.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Немного о проектировании</h2>
+		<p>Класс - это имя существительное(Пользователь, Правило, Кубик, Страница).</p>
+		<p>Метод - это глагол, действие(сохранить, получить, отдать, передать, сделать).</p>
+	</section>
+	<section class="slide">
+		<h2>Абстрактные классы</h2>
+		<ul>
+			<li>Из такого класса нельзя создать объект.</li>			
+			<li class="next">Класс содержит реализацию не всех методов.</li>
+			<li class="next">От такого класса нужно насследовать потомков</li>
+			<li class="next">Из классов потомков можно создать объекты</li>
+			<li class="next"><mark class="important">Применение:</mark> обяжет программистов реализовать методы в потомках</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Пример абстрактоного класса</h2>
+		<pre>
+		<code>abstract class Page {</code>
+		<code>	public function render(){</code>
+		<code>		$this->_renderHeader();</code>
+		<code>		echo $this->getContent();</code>
+		<code>		$this->_rendeFooter();</code>
+		<code>	}</code>
+		<code>	abstract public function getContent();</code>	
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Пример реализации</h2>
+		<pre>
+		<code>class IndexPage extends Page {</code>
+		<code>	public function getContent(){ </code>
+		<code>		return "content";</code>
+		<code>	}</code>
+		<code>}</code>
+		<code class="text">$page = new Page(); <mark class="comment">//Произойдет ошибка</mark></code>
+		<code class="text">$indexPage = new IndexPage(); <mark class="comment">//Можно работать с объектом</mark></code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Практическая работа</h2>
+		<a href="http://phpfiddle.org/main/code/yasw-wmdx">Задание</a>
+	</section>
+	<section class="slide">
+		<h2>Интерфейсы - абсолютные абстракции</h2>
+		<p>
+			В php можно объявить абстракции совсем без реализации
+		</p>
+		<pre>
+		<code>interface Page {</code>
+		<code>	public function render();</code>
+		<code>	public function getContent();</code>
+		<code>	protected function renderFooter();</code>
+		<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Интерфейсы имплементируются, а не наследуются</h2>
+		<pre>
+			<code>class IndexPage <mark class="important">implements</mark> Page {</code>
+			<code>	<mark class="comment">//Тут обязательно реализовуются все методы</mark></code>
+			<code>}</code>
+		</pre>
+	</section>	
+
+	<section class="slide">
+		<h2>Пример</h2>
+		<a href="http://phpfiddle.org/main/code/z7xy-vau7">Пример</a>
+	</section>
+	<!-- ХТМЛ -->
+	<section class="slide black">
+		<h2 class="shout">HTML&CSS</h2>
+		<img src="pictures/web_interfaces.jpg" class="cover">
+	</section>	
+	<section class="slide" id="border-radius1">
+		<h2>border-radius</h2>
+		<div class="corp-cube" style="border-radius: 20px;">border-radius: 20px</div>
+	</section>;
+	<section class="slide" id="border-radius2">
+		<h2>border-radius</h2>
+		<div class="corp-cube" style="border-radius: 20px 0 0 0;">border-radius: 20px 0 0 0;</div>
+	</section>
+	<section class="slide" id="border-radius3">
+		<h2>border-radius</h2>
+		<div class="corp-cube" style="border-radius: 50%; line-height: 300px; text-align: center;">border-radius: 50%;</div>
+	</section>
+	<section class="slide" id="border-radius4">
+		<h2>border-radius</h2>
+		<div class="corp-cube" style="border-radius: 50% 0 0 0; line-height: 300px; text-align: center;">border-radius: 50%;</div>
+	</section>
+	<section class="slide" id="border-radius4">
+		<style>
+			#border-radius4 .corp-cube:hover {
+				border-radius: 50% 0 0 0;
+			}
+		</style>
+		<h2>border-radius для hover</h2>
+		<div class="corp-cube" style=" line-height: 300px; text-align: center;">border-radius: 50% 0 0 0;</div>
+	</section>	
+	<section class="slide" id="opacity">
+		<style>
+			#opacity .corp-cube:hover {
+				opacity: .3;			}
+		</style>
+		<h2>Прозрачность - opacity</h2>
+		<div class="corp-cube">
+		<p>.corp-cube:hover {</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;opacity: .3; /*30%*/</p>
+		<p>}</p>
+		</div>
+	</section>	
+	<section class="slide">
+		<h2>Тень box-shadow</h2>
+		<p>box-shadow: [inset] 2px 5px 10px black;</p>
+		<p>inset - eсли тень направлена внутрь</p>
+		<p>2px - сдвиг по x</p>
+		<p>5px - сдвиг по y</p>
+		<p>5px - размытие тени</p>
+		<p>black - цвет тени</p>
+	</section>	
+	<section class="slide" id="box-shadow">
+	<style>
+		#box-shadow .corp-cube {
+			box-shadow: 12px 12px 20px rgba(0, 0, 0, .8);
+		}
+		#box-shadow .corp-cube:hover {
+			box-shadow: 18px 18px 25px rgba(0, 0, 0, .5);
+		}
+	</style>
+		<h2>Пример</h2>
+		<div class="corp-cube">
+			box-shadow: 12px 12px 20px rgba(0, 0, 0, .8);	
+		</div>
+	</section>	
+	<section class="slide">
+		<h2>Анимированный переход transition</h2>
+		<pre>
+			<code>transition: <переход> [, <переход> ]*</code>
+			<code>переход = [ none | transition-property ] || transition-duration || 
+transition-timing-function || transition-delay</code>
+		</pre>
+	</section>	
+	<section class="slide" id="transition">
+		<style>
+			#transition .corp-cube:hover {
+				font-size: 28px;
+				opacity: .3;
+			}
+		</style>
+		<h2>Демонстрация</h2>
+		<div class="corp-cube" style="transition: 2s;">
+			Для блока: transition: 2s; 
+			Для hover: font-size: 28px; opacity: .3;
+		</div>
+	</section>	
+	<section class="slide" id="transition">
+		<style>
+			#transition .corp-cube:hover {
+				font-size: 28px;
+				opacity: .3;
+			}
+		</style>
+		<h2>Демонстрация</h2>
+		<div class="corp-cube" style="transition: font-size .3s, opacity 3s;">
+			Для блока: transition: font-size .3s, opacity 3s; <br>
+			Для hover: font-size: 28px; opacity: .3;
+		</div>
+	</section>	
+	<section class="slide">
+		<h2>Практика</h2>
+		<ul>
+			<li>Кнопка с тенью и анимированным переходом</li>
+			<li><a href="https://codepen.io/OlVart/pen/QWLdxwR">Верстка сайта</a></li>
+		</ul>
+		<a href="https://codepen.io/OlVart/pen/xxKEMNm">Шпаргалка</a>
+		<a href="exercise/day12/Olympia.zip">Макет</a>
+	</section>	
+	<section class="slide">
+		<h2>Домашнее задание</h2>
+		<p>В задачнике</p>
+	</section>
+		<p class="badge">./
+			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remJove “progress” element.
+	-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

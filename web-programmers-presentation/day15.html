@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>День 15</h2>
+		<img src="pictures/iabs2.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+		-->
+		<style>
+			.corp-cube {
+				background-color: #FEDB37;
+				width: 300px;
+				height: 300px;
+				padding: 10px;
+				margin: 0 auto;
+			}
+			.corp-bgc {
+				background-color: #FEDB37;
+			}
+			#cover {
+				background-color: #FEDB37;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+		</style>
+	</section>
+<section class="slide black" id="cover-php">
+	<style>
+	#cover-php h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">HTML</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Адаптивная верстка</h2>
+	<p>
+		Адаптивная вёрстка сайта позволяет веб-страницам автоматически подстраиваться под экраны планшетов и смартфонов. 
+	</p>
+	<p class="next">
+		Адаптивная вёрстка предполагает отсутствие горизонтальной полосы прокрутки и масштабируемых областей при просмотре на любом устройстве, читабельный текст и большие области для кликабельных элементов.
+	</p>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<a href="exercise/adaptiv/shablon.zip">Шаблон</a>
+</section>
+<section class="slide black" id="cover-php">
+	<style>
+	#cover-php h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">PHP</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Фреймворк</h2>
+	<p><b>Фре́ймворк (framework — каркас, структура)</b> — программная платформа, определяющая структуру программной системы; программное обеспечение, облегчающее разработку и объединение разных компонентов большого программного проекта.</p>
+</section>
+<section class="slide">
+	<h2>Основные php фреймворки</h2>
+	<ul>
+		<li>symfony</li>
+		<li class="next">laravel</li>
+		<li class="next">zend</li>
+		<li class="next">phalcon</li>
+		<li class="next">yii</li>
+		<li class="next">...</li>
+		<li class="next">slim</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Установка Yii</h2>
+	<ul>
+		<li>https://github.com/yiisoft/yii2/blob/master/docs/guide-ru/start-installation.md</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Composer</h2>
+	<p>cd ~/myprojects</p>
+	<p>curl -sS https://getcomposer.org/installer | php</p>
+	<p>sudo mv composer.phar /usr/local/bin/composer</p>
+</section>
+<section class="slide">
+	<h2>Дальше</h2>
+	<p>Регистрация в github</p>
+	<p>composer global require fxp/composer-asset-plugin</p>
+	<p>composer create-project --prefer-dist yiisoft/yii2-app-basic yiitest</p>
+</section>
+<section class="slide">
+	<h2>Дальше</h2>
+	<p>cd yiitest</p>
+	<p>php requirements.php</p>
+	<p>sudo apt-get install sqlite3 libsqlite3-dev php-sqlite3</p>
+	<p>php yii serve</p>
+</section>
+<section class="slide">
+	<h2>Дальше</h2>
+	<p>Включить милые ссылки в конфиге config/web.php</p>
+	<p>Создать файл .htaccess в папке web</p>
+	<p style="font-size: 8px;">
+	RewriteEngine on <br>
+    # Если запрашиваемая в URL директория или файл существуют обращаемся к ним напрямую<br>
+    RewriteCond %{REQUEST_FILENAME} !-f<br>
+    RewriteCond %{REQUEST_FILENAME} !-d<br>
+    # Если нет - перенаправляем запрос на index.php<br>
+    RewriteRule . index.php<br>
+	</p>
+</section>
+<section class="slide">
+	<h2>Дальше</h2>
+	<p>Логи /var/log/apache2$ tail error.log</p>
+	<p>Включить rewrite</p>
+	<p>sudo a2enmod rewrite</p>
+	<p>Редактировать about.php</p>
+</section>
+<section class="slide">
+	<h2>Дальше</h2>
+	<p>Добавить свой контроллер и экшны и вью к ним</p>
+	<p>Добавить экшны в навигацию</p>
+	<p>Научиться получать $_GET параметры</p>
+</section>
+<section class="slide">
+	<h2>Домашнее задание</h2>
+	<p>Задачник День 15</p>
+</section>
+		<p class="badge">
+			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remJove “progress” element.
+	-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
