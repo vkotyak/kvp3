@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+div {border: solid 1px #999;}
+.parent {
+    width: 20rem;
+    height:200rem;
+}
+
+.child {
+    padding: 1em;
+    width:5em;
+    height:5em;
+    font: italic 1rem sans-serif;
+    position: fixed;
+    bottom: 1px;
+    right: 1px;
+}
