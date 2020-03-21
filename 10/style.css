@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding:0; margin:0;
+    font: sans-serif 1rem;
+}
+#wrap {
+    max-width: 1600px;
+    margin:0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    display:flex;
+    justify-content: stretch;
+}
+
+header > * {
+    flex: 1 1 300px;
+}
+
+#mainmenu ul {
+    margin:0; padding:0;list-style: none;
+    display:flex;
+}
+#mainmenu a {
+    padding: 0.5em 1em;
+    display: inline-block;
+}
+
+#banner{
+    background: #f2f2f2 url('./img/woman.jpg') no-repeat  100% 0% ;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#herotext {
+    margin: 5em 0;
+    padding: 3em;
+    float:left;
+    max-width: 500px;
+    background-color: rgba(122,122,122,.5);
+    color:white;
+}
+
+main {
+    max-width: 1000px;
+    margin:0 auto;
+}
+main h2 {
+    text-align: center;
+}
+
+.row {
+    width:100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+.item {
+    flex: 0 1 49%;
+}
+
+footer {
+    background-color: indigo;
+    color: lightblue;
+    display: block;
+    overflow: hidden;
+    padding:2em;
+    text-align: center;
+}
