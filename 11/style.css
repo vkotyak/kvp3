@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    height: 100%;
+}
+
+body {
+    background-color: #eee;
+    padding-top: 1rem;
+}
+
+.wrap {
+    max-width: 1400px;
+    width: 90%;
+    margin: auto;
+    background-color: #dfdfdf;
+    height: calc(100% - 2rem);
+    box-shadow: 3px 3px 7px rgba(255,255,255,.5), inset 3px 3px 7px rgba(77,77,77,.5);
+    border-radius:7px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#page {
+    padding:1rem;
+}
