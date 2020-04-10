@@ -1,0 +1,65 @@
+<head>
+<style>
+.wrapper div {
+  min-width: 100px;
+  min-height:100px;
+}
+.wrapper {
+  width: 80%; margin: auto;
+  max-width:1600px;
+}
+
+#tabs, #block {
+  width:100%; position:relative;
+}
+#tabs {
+  display: flex;
+  z-index:2;
+}
+#tabs > div {
+  border: solid 1px #000;
+  background-color: #fff;
+}
+#tabs > div.active {
+  background-color:#f2f2f2;
+  border-bottom:solid 1px #f2f2f2;
+}
+
+#block {
+  border: solid 1px #000;
+  margin-top:-1px;
+  background-color: #f2f2f2;
+}
+
+.row {
+  display:flex;
+  flex-wrap:wrap;
+}
+.item {
+  border: solid 1px #bbb;
+  flex: 1 1 300px;
+}
+@media screen and (max-width: 600px) {
+    .item {
+      font-size: 2rem;
+  }
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div id="tabs">
+  <div class="tab"></div>
+  <div class="tab active"></div>
+  <div class="tab"></div>
+</div>
+<div id="block">
+</div>
+<div class="row">
+  <div class="item">1</div>
+  <div class="item">1</div>
+  <div class="item">1</div>
+  <div class="item">1</div>
+</div>
+</div>
+</body>
