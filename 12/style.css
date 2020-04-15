@@ -1,0 +1,16 @@
+body {
+}
+nav {
+    display:none;
+}
+nav.open {display:block;}
+nav ul {margin:0; padding: 0;list-style: none;display:flex; flex-wrap: wrap;flex-direction: column;}
+nav ul li {padding:0.5em 1em; border: solid 1px #eee;}
+
+@media screen and (min-width: 768px) {
+    #menubutton {display:none;}
+    nav {
+        display:block;
+    }
+    nav ul {flex-direction: row;}
+}
